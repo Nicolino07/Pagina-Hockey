@@ -1,0 +1,14 @@
+.principal {
+  text-align: center;
+  background-color: whitesmoke;
+  padding-top: 70px; /* o el alto del navbar */
+  min-height: 100vh; /* para que ocupe toda la pantalla verticalmente */
+}
+.principal h1 {
+  font-family: verdana;
+  font-size: 5rem;
+}
+.App-link {
+  color: #61dafb;
+}
+

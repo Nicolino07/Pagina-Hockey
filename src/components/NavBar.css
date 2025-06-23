@@ -1,0 +1,46 @@
+/* Estilo barra de navegacion */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #171c21; 
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  height: 6rem;
+  width: auto;
+  margin-right: auto; /* fuerza a que el logo quede a la izquierda */
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #61dafb;
+}
