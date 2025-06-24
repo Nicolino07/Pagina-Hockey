@@ -1,7 +1,7 @@
 import React from "react";
-import "./Galeria.css";
+import "./EstiloGaleria.css";
 
-export default function Galeria() {
+export default function PrimeraCaballeros() {
   return (
     <div className='galeria-container'>
         <h1>Subir fotos</h1>

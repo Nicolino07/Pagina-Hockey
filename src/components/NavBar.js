@@ -5,10 +5,6 @@ import "./NavBar.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -19,8 +15,28 @@ export default function Navbar() {
 
       <div className="nav-center">
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+
+          {/* Submenú de Clubes */}
+          <div className="dropdown">
+            <span className="dropbtn">Clubes</span>
+            <div className="dropdown-content">
+              <Link to="/equipos/Huemules">Huemules</Link>
+              <Link to="/equipos/Wiliches">Wiliches</Link>
+              <Link to="/equipos/Estudiantes">Estudiantes</Link>
+            </div>
+          </div>
+
+          {/* Submenú de Galería */}
+          <div className="dropdown">
+            <span className="dropbtn">Galería</span>
+            <div className="dropdown-content">
+              <Link to="/galeria/PrimeraDamas">Damas</Link>
+              <Link to="/galeria/PrimeraCaballeros">Caballeros</Link>
+              <Link to="/galeria/Sub12">Sub 12</Link>
+            </div>
+          </div>
+
           <Link to="/fechas" onClick={() => setMenuOpen(false)}>Fechas</Link>
-          <Link to="/galeria" onClick={() => setMenuOpen(false)}>Galería</Link>
           <Link to="/posiciones" onClick={() => setMenuOpen(false)}>Posiciones</Link>
         </div>
       </div>

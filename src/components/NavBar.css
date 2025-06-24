@@ -44,3 +44,61 @@
 .nav-links a:hover {
   color: #61dafb;
 }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #61dafb;
+}
+
+/* Submenú oculto por defecto (controlado por React) */
+/* Contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón principal */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500; /*igual que nav-links a*/
+}
+
+/* Submenú oculto por defecto */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4f7ab3;
+  min-width: 3rem;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(92, 1, 1, 0.3);
+}
+
+/* Mostrar submenú al hacer hover en .dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilo de los enlaces del submenú */
+.dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #026e72;
+}
