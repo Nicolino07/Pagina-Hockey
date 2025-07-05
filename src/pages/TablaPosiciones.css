@@ -1,0 +1,37 @@
+/* Estilos locales a TablaPosiciones */
+
+.posiciones-container {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.posiciones-container h2 {
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.posiciones-container table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: auto; /* o 100% si querés que ocupe todo el ancho disponible */
+    min-width: 600px; /* O el mínimo que necesites */
+}
+
+.posiciones-container th,
+.posiciones-container td {
+    color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.tabla-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+}

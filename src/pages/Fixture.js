@@ -1,7 +1,7 @@
 import React from "react";
-import "./Fechas.css";
+import "./Fixture.css";
 
-export default function Fechas() {
+export default function Fixture() {
   return (
     <div className='fecha-container'>
         <h1>PROXIMAS FECHAS</h1>

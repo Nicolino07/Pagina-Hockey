@@ -1,10 +1,9 @@
 /* Estilo barra de navegacion */
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #171c21; 
+  background: #d1834f; 
   backdrop-filter: blur(6px);
 
   display: flex;
@@ -17,7 +16,7 @@
 .logo {
   height: 6rem;
   width: auto;
-  margin-right: auto; /* fuerza a que el logo quede a la izquierda */
+  margin-right: auto;
 }
 
 .nav-center {
@@ -28,7 +27,6 @@
   gap: 2rem;
 }
 
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -36,7 +34,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
 }
@@ -46,7 +44,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
@@ -56,24 +54,20 @@
   color: #61dafb;
 }
 
-/* Submenú oculto por defecto (controlado por React) */
-/* Contenedor del dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Botón principal */
 .dropbtn {
   background-color: transparent;
-  color: white;
+  color: black;
   padding: 8px 10px;
   border: none;
   cursor: pointer;
-  font-weight: 500; /*igual que nav-links a*/
+  font-weight: 500;
 }
 
-/* Submenú oculto por defecto */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -86,12 +80,10 @@
   box-shadow: 0 4px 8px rgba(92, 1, 1, 0.3);
 }
 
-/* Mostrar submenú al hacer hover en .dropdown */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Estilo de los enlaces del submenú */
 .dropdown-content a {
   color: white;
   padding: 10px 16px;
@@ -101,4 +93,69 @@
 
 .dropdown-content a:hover {
   background-color: #026e72;
+}
+
+/* Ícono hamburguesa */
+.navbar-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1100;
+}
+
+/* =============================== */
+/* Estilos para pantallas chicas  */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-center {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding-left: 1.5rem;
+  }
+
+  .dropbtn {
+    padding-left: 0;
+  }
 }

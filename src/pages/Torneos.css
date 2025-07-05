@@ -1,0 +1,37 @@
+.torneos-container h1 {
+    font-size: 5rem;
+}
+/*Color del nombre del torneo al ingresar*/
+.torneos-container h2 {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+.torneos-container ul {
+  list-style: none; /* quitamos los puntos */
+  padding: 0;
+  display: flex;          /* para que los li estén en fila */
+  gap: 12px;              /* espacio entre botones */
+  flex-wrap: wrap;        /* para que si hay muchos, salten a la siguiente línea */
+  justify-content: center; /* centrado horizontal */
+}
+
+.torneos-container li {
+  /* quitamos márgenes para que no se junten */
+  margin: 0;
+}
+
+.torneos-container button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.torneos-container button:hover {
+  background-color: darkorange;
+}

@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
-import Fechas from "./pages/Fechas"; 
-import Posiciones from "./pages/Posiciones";
+import Fixture from "./pages/Fixture"; 
+import Torneos from "./pages/Torneos";
 
 /*Importar equipos */
 import Huemules from "./equipos/Huemules";
@@ -12,10 +12,9 @@ import Estudiantes from "./equipos/Estudiantes";
 /* Importar Galerias */
 import PrimeraCaballeros from "./galeria/PrimeraCaballeros";
 import PrimeraDamas from "./galeria/PrimeraDamas";
-import Sub12 from "./galeria/Sub12";
+import Inferiores from "./galeria/Inferiores";
 
-import "./App.css"; // esto importa los estilos
-
+import "./App.css"; 
 
 
 function App() {
@@ -26,8 +25,8 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Inicio />} />
-          <Route path="/fechas" element={<Fechas />} />
-          <Route path="/posiciones" element={<Posiciones />} />
+          <Route path="/fixture" element={<Fixture />} />
+          <Route path="/torneos" element={<Torneos />} />
 
           {/* Ruta submenu clubes*/}
           <Route path="/equipos/Huemules" element={<Huemules />} />
@@ -36,7 +35,7 @@ function App() {
           {/* rutas submenu galeria */}
           <Route path="/galeria/PrimeraDamas" element={<PrimeraDamas />} />
           <Route path="/galeria/PrimeraCaballeros" element={<PrimeraCaballeros/>} />
-          <Route path="/galeria/Sub12" element={<Sub12 />} />
+          <Route path="/galeria/Inferiores" element={<Inferiores />} />
 
 
           
