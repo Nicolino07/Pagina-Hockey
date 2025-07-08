@@ -32,20 +32,21 @@ export default function TablaPosiciones({ torneoId }) {
           </tr>
         </thead>
         <tbody>
-          {posiciones.map((equipo, index) => (
-            <tr key={equipo.id}>
-              <td>{index + 1}</td>
-              <td>{equipo.nombre}</td>
+          {posiciones.map((equipo) => (
+            <tr key={equipo.posicion}>
+              <td>{equipo.posicion}</td>
+              <td>{equipo.equipo}</td>
               <td>{equipo.puntos}</td>
-              <td>{equipo.partidos_jugados}</td>
-              <td>{equipo.ganados}</td>
-              <td>{equipo.empatados}</td>
-              <td>{equipo.perdidos}</td>
-              <td>{equipo.goles_favor}</td>
-              <td>{equipo.goles_contra}</td>
-              <td>{equipo.diferencia_gol}</td>
+              <td>{equipo.PJ}</td>
+              <td>{equipo.PG}</td>
+              <td>{equipo.PE}</td>
+              <td>{equipo.PP}</td>
+              <td>{equipo.GF}</td>
+              <td>{equipo.GC}</td>
+              <td>{equipo.DF}</td>
             </tr>
           ))}
+
         </tbody>
       </table>
     </div>

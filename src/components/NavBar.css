@@ -1,7 +1,7 @@
 /* Estilo barra de navegacion */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 2rem;
   width: 100%;
   background: #d1834f; 
   backdrop-filter: blur(6px);
@@ -9,12 +9,27 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 0 2rem;
+  padding: 0 1rem; /* menos padding horizontal */
+  height: 3.5rem;   /* altura fija más finita */
   z-index: 1000;
 }
 
+.barra-superior {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1100;
+}
+
 .logo {
-  height: 6rem;
+  height: 3rem;
   width: auto;
   margin-right: auto;
 }
@@ -71,7 +86,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4f7ab3;
+  background-color: rgb(31, 26, 32);
   min-width: 3rem;
   z-index: 1;
   top: 100%;

@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
 import Fixture from "./pages/Fixture"; 
 import Torneos from "./pages/Torneos";
+import Resultados from "./pages/Resultados";
 
 /*Importar equipos */
 import Huemules from "./equipos/Huemules";
@@ -17,6 +19,7 @@ import Inferiores from "./galeria/Inferiores";
 import "./App.css"; 
 
 
+
 function App() {
   return (
     <div className="principal">
@@ -25,8 +28,13 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Inicio />} />
-          <Route path="/fixture" element={<Fixture />} />
+      
+          <Route path="/resultados" element={<Resultados />} />
+          <Route path="/resultados/:categoria" element={<Resultados />} />
+
+
           <Route path="/torneos" element={<Torneos />} />
+          <Route path="/fixture" element={<Fixture />} />
 
           {/* Ruta submenu clubes*/}
           <Route path="/equipos/Huemules" element={<Huemules />} />
