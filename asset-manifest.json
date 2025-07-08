@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Pagina-Hockey/static/css/main.0da1a34f.css",
+    "main.js": "/Pagina-Hockey/static/js/main.045dc3c0.js",
+    "static/js/453.37d667a4.chunk.js": "/Pagina-Hockey/static/js/453.37d667a4.chunk.js",
+    "index.html": "/Pagina-Hockey/index.html",
+    "main.0da1a34f.css.map": "/Pagina-Hockey/static/css/main.0da1a34f.css.map",
+    "main.045dc3c0.js.map": "/Pagina-Hockey/static/js/main.045dc3c0.js.map",
+    "453.37d667a4.chunk.js.map": "/Pagina-Hockey/static/js/453.37d667a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0da1a34f.css",
+    "static/js/main.045dc3c0.js"
+  ]
+}
