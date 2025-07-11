@@ -5,7 +5,7 @@ export default function TablaPosiciones({ torneoId }) {
   const [posiciones, setPosiciones] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/torneos/${torneoId}/posiciones`)
+    fetch(`${process.env.REACT_APP_API_URL}/torneos/${torneoId}/posiciones`)
       .then(res => res.json())
       .then(data => setPosiciones(data))
       .catch(err => console.error(err));

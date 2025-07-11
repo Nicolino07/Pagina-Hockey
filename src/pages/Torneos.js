@@ -7,7 +7,6 @@ export default function Torneos() {
   const [torneoSeleccionado, setTorneoSeleccionado] = useState(null);
 
   useEffect(() => {
-    console.log("API URL usada:", process.env.REACT_APP_API_URL);
     fetch(`${process.env.REACT_APP_API_URL}/torneos/actuales`)
       .then((res) => res.json())
       .then((data) => setTorneos(data))
