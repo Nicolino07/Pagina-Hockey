@@ -8,7 +8,7 @@ export default function Torneos() {
 
   useEffect(() => {
     console.log("API URL usada:", process.env.REACT_APP_API_URL);
-    fetch('https://backend-pagina-hockey.onrender.com/torneos/actuales')
+    fetch(`${process.env.REACT_APP_API_URL}/torneos/actuales`)
       .then((res) => res.json())
       .then((data) => setTorneos(data))
       .catch((error) => console.error("Error al cargar torneos:", error));
