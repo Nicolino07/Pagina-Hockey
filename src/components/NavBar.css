@@ -115,11 +115,21 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  z-index: 1100;
+  color: #d1834f; /* naranja */
+  position: fixed;
+  top: 3.5rem;
+  right: 1rem;
+  z-index: 1300;
+  user-select: none;
+  background: white;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
 }
 
 /* =============================== */

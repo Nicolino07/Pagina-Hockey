@@ -1,37 +1,44 @@
 /* Estilos locales a TablaPosiciones */
 
 .posiciones-container {
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
-
 
 .posiciones-container h2 {
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.posiciones-container table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: auto; /* o 100% si querés que ocupe todo el ancho disponible */
-    min-width: 600px; /* O el mínimo que necesites */
-}
-
-.posiciones-container th,
-.posiciones-container td {
-    color: whitesmoke;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: center;
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .tabla-wrapper {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: auto;  /* Esto permite scroll horizontal si es necesario */
   margin-top: 1rem;
+}
+
+.posiciones-container table {
+  border-collapse: collapse;
+  width: 100%;       /* Que ocupe todo el contenedor */
+  min-width: 600px;  /* Ancho mínimo para que no se rompa */
+  margin: 0 auto;
+}
+
+.posiciones-container th,
+.posiciones-container td {
+  color: whitesmoke;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .posiciones-container th,
+  .posiciones-container td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
 }
