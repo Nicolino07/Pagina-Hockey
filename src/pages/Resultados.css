@@ -1,47 +1,85 @@
 .resultados-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+    color: whitesmoke;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .selector-fechas {
-  margin: 20px 0;
-  text-align: center;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-.selector-fechas select {
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #f8f8f8;
-  font-size: 16px;
+.fecha-actual {
+    margin: 0;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.select-fecha {
+    background-color: #1f1a20;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 300px;
+    width: 100%;
+}
+
+
+.titulo-fecha {
+    text-align: center;
+    margin: 20px 0;
+    color: whitesmoke;
+    font-weight: 300;
+    text-transform: capitalize;
 }
 
 .partidos-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .partido-card {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
+    padding: 12px 0;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 }
 
 .equipo-local {
-  text-align: right;
-  padding-right: 15px;
+    text-align: right;
+    padding-right: 15px;
 }
 
 .marcador {
-  text-align: center;
-  font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+    font-weight: 500;
 }
 
 .equipo-visitante {
-  text-align: left;
-  padding-left: 15px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* Estilos para el estado de carga y error */
+.loading, .error {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.error {
+    color: #ff6b6b;
 }
