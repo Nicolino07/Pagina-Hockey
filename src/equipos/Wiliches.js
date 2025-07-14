@@ -4,7 +4,7 @@ import "./Equipos.css";
 export default function Wiliches() {
   return (
     <div className='head-container'>
-        <h1>Wiliches</h1>
+        <h2>Wiliches</h2>
     </div>
   );
 }

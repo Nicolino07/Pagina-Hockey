@@ -30,9 +30,11 @@
 }
 
 .logo {
-  height: 3rem;
-  width: auto;
-  margin-right: 1rem;
+  top: 0;
+  left: 10px;
+  height: 70px;         /* ajustá según tu diseño */
+  z-index: 1100;         /* para que quede encima del resto */
+
 }
 
 /* CENTRADO del nav sin position absolute */
@@ -88,7 +90,8 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(31, 26, 32);
+ 
+  background-color: transparent;
   min-width: 3rem;
   z-index: 1;
   top: 100%;
@@ -102,6 +105,7 @@
 }
 
 .dropdown-content a {
+   color: whitesmoke;
   padding: 10px 16px;
   text-decoration: none;
   display: block;

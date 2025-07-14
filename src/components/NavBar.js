@@ -61,6 +61,8 @@ export default function Navbar() {
 
         <div className="nav-center">
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+
+            <Link to="/" onClick={handleNavClick}>Inicio</Link>
             {/* Resultados */}
             <div className="dropdown">
               <span 

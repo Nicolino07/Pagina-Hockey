@@ -17,7 +17,8 @@ export default function Resultados() {
   setLoading(true);
   setError(null);
 
-  fetch(`http://127.0.0.1:5000/partidos/categoria/${encodeURIComponent(categoria)}`)
+  fetch(`${process.env.REACT_APP_API_URL}/partidos/categoria/${encodeURIComponent(categoria)}`)
+
     .then(response => {
       if (!response.ok) throw new Error('Network response was not ok');
       return response.json();
