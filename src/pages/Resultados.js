@@ -54,14 +54,13 @@ export default function Resultados() {
           <div className="partidos-grid">
             {partidos.map((partido, index) => (
               <div key={index} className="partido-card">
-                <p>
-                  <span>{partido.equipo_local}</span>
-                  <span>{partido.goles_local} - {partido.goles_visitante}</span>
-                  <span>{partido.equipo_visitante}</span>
-                </p>
+                <span className="equipo-local">{partido.equipo_local}</span>
+                <span className="marcador">{partido.goles_local} - {partido.goles_visitante}</span>
+                <span className="equipo-visitante">{partido.equipo_visitante}</span>
               </div>
             ))}
           </div>
+          
         </>
       ) : (
         <p>Seleccioná una categoría para ver los resultados.</p>
