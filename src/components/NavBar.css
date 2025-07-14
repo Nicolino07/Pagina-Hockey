@@ -187,10 +187,7 @@
     margin-right: -1rem; /* Compensa el padding del contenedor */
   }
 
-  .dropdown-content::-webkit-scrollbar {
-    display: none; /* Oculta scrollbar en Chrome/Safari */
-  }
-
+  
   .dropdown-content a {
     display: inline-block; /* Muestra en línea en lugar de bloque */
     padding: 0.5rem 1rem;
@@ -220,5 +217,19 @@
     display: block;
   }
 
- 
+  /* Botón de cierre */
+  .dropdown-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    background: #d1834f;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1rem;
+    z-index: 1003;
+  }
+
 }

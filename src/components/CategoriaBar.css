@@ -1,14 +1,33 @@
 .barra-categoria {
     margin-top: 1.5rem;
-    background-color:  rgb(31, 26, 32); /* fondo negro */
-    border: 1px ridge orange;  /* borde para diferenciar */
+    background-color: rgb(31, 26, 32); /* fondo negro */
+    border: 1px ridge orange;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     padding: 10px;
     display: flex;
     gap: 10px;
     align-items: center;
-    border-radius: 6px; /* esquinas redondeadas */
+    border-radius: 6px;
+
+    /* 🔽 Nuevas propiedades para scroll horizontal */
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: orange transparent;
 }
+
+/* Opcional: scroll más visible en navegadores Webkit */
+.barra-categoria::-webkit-scrollbar {
+    height: 6px;
+}
+.barra-categoria::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 4px;
+}
+.barra-categoria::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 .barra-categoria button {
     background-color: white;
     border: none;
@@ -17,8 +36,5 @@
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-.barra-categoria button:hover {
-    background-color: #0056b3;
-    color: white;
+    flex-shrink: 0; /* 🔽 evita que el botón se encoja */
 }
