@@ -32,7 +32,7 @@
 .logo {
   top: 0;
   left: 10px;
-  height: 70px;         /* ajustá según tu diseño */
+  height: 60px;         /* ajustá según tu diseño */
   z-index: 1100;         /* para que quede encima del resto */
 
 }

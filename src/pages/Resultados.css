@@ -3,12 +3,6 @@
     
 }
 
-.partidos-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espacio entre partidos */
-}
-
 .partido-card {
   background-color: #1f1a20;
   border: 1px ridge orange;
@@ -17,4 +11,14 @@
   border-radius: 8px;
   color: white;
   font-weight: 400;
+  white-space: nowrap; /* Evita saltos de línea */
+  overflow: hidden; /* Opcional: maneja texto muy largo */
+  text-overflow: ellipsis; /* Opcional: añade "..." si el texto es muy largo */
+}
+
+.partido-card p {
+  margin: 0; /* Elimina márgenes del párrafo */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 8px; /* Espacio entre elementos */
 }

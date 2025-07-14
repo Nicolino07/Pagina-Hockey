@@ -54,7 +54,7 @@ export default function Resultados() {
           <div className="partidos-grid">
             {partidos.map((partido, index) => (
               <div key={index} className="partido-card">
-                <p style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+                <p>
                   <span>{partido.equipo_local}</span>
                   <span>{partido.goles_local} - {partido.goles_visitante}</span>
                   <span>{partido.equipo_visitante}</span>
