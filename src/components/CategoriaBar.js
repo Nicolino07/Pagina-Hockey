@@ -9,7 +9,7 @@ export default function CategoriaBar() {
   const categorias = [
     "Damas A",
     "Damas B",
-    "Caballeros",
+    "Caballeros A",
     "Sub-19",
     "Sub-16",
     "Sub-14",
