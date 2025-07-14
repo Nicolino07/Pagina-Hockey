@@ -26,7 +26,7 @@ function App() {
     <div className="principal">
       <BrowserRouter>
         <Navbar />
-        
+          
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/resultados" element={<Resultados />} />
@@ -40,8 +40,7 @@ function App() {
             <Route path="/galeria/PrimeraCaballeros" element={<PrimeraCaballeros />} />
             <Route path="/galeria/Inferiores" element={<Inferiores />} />
           </Routes>
-        
-
+          
           <Footer /> {/* Footer fijo en todas las páginas */}
         
       </BrowserRouter>

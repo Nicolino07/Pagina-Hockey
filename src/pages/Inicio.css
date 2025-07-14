@@ -1,3 +1,10 @@
-.inicio-container h1 {
-    font-size: 5rem;
+.inicio-container{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
 }
+
+
