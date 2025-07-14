@@ -48,19 +48,21 @@ export default function Resultados() {
     // Filtrar partidos por fecha seleccionada
     const partidosFiltrados = partidos.filter(p => p.fecha === fechaSeleccionada);
 
-    // Formatear fecha para mostrar
-    const formatearFecha = (fechaStr) => {
+    // Funcion Formatear fecha 
+        const formatearFecha = (fechaStr) => {
+        // Ajuste clave: usar UTC para evitar desplazamientos
         const fecha = new Date(fechaStr);
-        if (isNaN(fecha)) return "Fecha inválida";
-
+        const fechaAjustada = new Date(fecha.getTime() + fecha.getTimezoneOffset() * 60000);
+        
         const opciones = { 
             weekday: 'long', 
             day: 'numeric', 
             month: 'long',
-            timeZone: 'America/Argentina/Buenos_Aires' // Ajusta según tu zona horaria
+            timeZone: 'America/Argentina/Buenos_Aires'
         };
-        return fecha.toLocaleDateString('es-AR', opciones);
-    };
+        
+        return fechaAjustada.toLocaleDateString('es-AR', opciones);
+        };
 
     return (
         <div className="resultados-container">
