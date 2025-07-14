@@ -1,19 +1,20 @@
-/* Estilo barra de navegacion */
+/* Ajustes generales */
 .navbar {
   position: fixed;
   top: 2rem;
   width: 100%;
-  background: #d1834f; 
+  background: #d1834f;
   backdrop-filter: blur(6px);
 
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding: 0 1rem; /* menos padding horizontal */
-  height: 3.5rem;   /* altura fija más finita */
+  justify-content: space-between; /* ← clave */
+  padding: 0 1rem;
+  height: 3.5rem;
   z-index: 1000;
 }
 
+/* Barra superior con clima */
 .barra-superior {
   position: fixed;
   top: 0;
@@ -31,15 +32,16 @@
 .logo {
   height: 3rem;
   width: auto;
-  margin-right: auto;
+  margin-right: 1rem;
 }
 
+/* CENTRADO del nav sin position absolute */
 .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 2rem;
+  margin: 0 auto;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .nav-links {
@@ -100,7 +102,6 @@
 }
 
 .dropdown-content a {
-  color: white;
   padding: 10px 16px;
   text-decoration: none;
   display: block;
@@ -110,77 +111,89 @@
   background-color: #026e72;
 }
 
-/* Ícono hamburguesa */
+/* Ajustes para el botón hamburguesa */
 .navbar-toggle {
-  display: none;
-  font-size: 2rem;
+  position: absolute;
+  top: 15%;
+  right: 3rem; /* Cambiado de porcentaje a valor fijo para mejor control */
+  font-size: 1.3rem;
+  width: 2.5rem; /* Tamaño fijo para mejor consistencia */
+  height: 2.5rem;
   cursor: pointer;
-  color: #d1834f; /* naranja */
-  position: fixed;
-  top: 3.5rem;
-  right: 1rem;
-  z-index: 1300;
-  user-select: none;
-  background: white;
+  background: black;
+  color: #d1834f;
+  border: none;
   border-radius: 5px;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem;
+  display: none;
+  z-index: 1001;
 }
 
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-}
 
-/* =============================== */
-/* Estilos para pantallas chicas  */
-/* =============================== */
-
+/* ============================== */
+/* Estilos para pantallas chicas */
+/* ============================== */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .logo {
-    height: 4rem;
-    margin-bottom: 1rem;
-  }
-
-  .nav-center {
-    position: static;
-    transform: none;
-    width: 100%;
+    height: 3.5rem;
   }
 
   .navbar-toggle {
     display: block;
+    z-index: 1001;
+  }
+
+  .nav-center {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    display: none;
-  }
+  flex-direction: column;
+  position: absolute; /* Cambiado a absolute */
+  top: 100%; /* Aparece justo debajo del navbar */
+  right: 2.5rem; /* Alineado a la derecha con el botón */
+  width: auto; /* Ancho según contenido */
+  min-width: 150px; /* Ancho mínimo */
+  display: none;
+  background-color: #d1834f;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 0.5rem; /* Pequeña separación del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
   .nav-links.active {
     display: flex;
   }
 
   .dropdown-content {
+    padding: 0.5rem 0rem;
     position: static;
+    background-color: black;
     box-shadow: none;
-    background-color: transparent;
+    padding-left: 1rem;
   }
 
   .dropdown-content a {
-    color: black;
-    padding-left: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: #d1834f;
+    padding-left: 1rem;
+    transition: background-color 0.2s;
+  }
+
+   .dropdown-content.active {
+    display: block;
   }
 
   .dropbtn {
-    padding-left: 0;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: block;
   }
+
+
 }

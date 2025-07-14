@@ -1,7 +1,7 @@
 .principal {
   text-align: center;
   background-color: rgb(31, 26, 32);
-  padding-top: 70px; /* o el alto del navbar */
+  padding-top: 5rem; /* o el alto del navbar */
   min-height: 100vh; /* para que ocupe toda la pantalla verticalmente */
 }
 .principal h1 {

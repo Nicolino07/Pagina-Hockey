@@ -1,28 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [clima, setClima] = useState("Cargando clima...");
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const navbarRef = useRef(null);
 
-
- const obtenerClima = () => {
-  fetch("https://wttr.in/?format=%l+🌡+%t+🌥+%C") // Ej: "Trelew 🌡 +11°C 🌥 cielo cubierto"
-    .then((res) => res.text())
-    .then((data) => {
-      setClima(data.trim()); // Mostramos directamente la cadena
-    })
-    .catch(() => setClima("🌐 No se pudo cargar el clima"));
-};
-
-
+  const obtenerClima = () => {
+    fetch("https://wttr.in/?format=%l+🌡+%t+🌥+%C")
+      .then((res) => res.text())
+      .then((data) => setClima(data.trim()))
+      .catch(() => setClima("🌐 No se pudo cargar el clima"));
+  };
 
   useEffect(() => {
-    obtenerClima(); // primera vez
-    const intervalo = setInterval(obtenerClima, 10 * 60 * 1000); // cada 10 min
+    obtenerClima();
+    const intervalo = setInterval(obtenerClima, 10 * 60 * 1000);
+    return () => clearInterval(intervalo);
+  }, []);
 
-    return () => clearInterval(intervalo); // limpiar al desmontar
+  const handleNavClick = () => {
+    if (window.innerWidth <= 768) {
+      setMenuOpen(false);
+      setActiveDropdown(null);
+    }
+  };
+
+  const toggleDropdown = (index) => {
+    if (window.innerWidth <= 768) {
+      setActiveDropdown(activeDropdown === index ? null : index);
+    }
+  };
+
+  const handleClickOutside = (e) => {
+    if (navbarRef.current && !navbarRef.current.contains(e.target)) {
+      setMenuOpen(false);
+      setActiveDropdown(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -31,62 +54,76 @@ export default function Navbar() {
         <span>{clima}</span>
       </div>
 
-      <div className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </div>
-
-      <nav className="navbar">
-        <div className="navbar-left">
-          <Link to="/">
-            <img className="logo" src="/Logo HB.png" alt="Logo" />
-          </Link>
-        </div>
+      <nav className="navbar" ref={navbarRef}>
+        <Link to="/" onClick={handleNavClick}>
+          <img className="logo" src="/Logo HB.png" alt="Logo" />
+        </Link>
 
         <div className="nav-center">
-
-    
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-
-          
-          {/* Submenú de Resultados */}
-          <div className="dropdown">
-            <span className="dropbtn">Resultados</span>
-            <div className="dropdown-content">
-              <Link to="/resultados/Damas A">Damas A</Link>
-              <Link to="/resultados/Damas B">Damas B</Link>
-              <Link to="/resultados/Caballeros">Caballeros</Link>
-              <Link to="/resultados/Sub-19">Sub-19</Link>
-              <Link to="/resultados/Sub-16">Sub-16</Link>
-              <Link to="/resultados/Sub-14">Sub-14</Link>
-              <Link to="/resultados/Sub-12">Sub-12</Link>
-            </div>
-          </div>
-          <Link to="/torneos" onClick={() => setMenuOpen(false)}>Torneos</Link>
-          <Link to="/fixture" onClick={() => setMenuOpen(false)}>Fixture</Link>
-
-            {/* Submenú de Clubes */}
+            {/* Resultados */}
             <div className="dropdown">
-              <span className="dropbtn">Clubes</span>
-              <div className="dropdown-content">
-                <Link to="/equipos/Huemules">Huemules</Link>
-                <Link to="/equipos/Wiliches">Wiliches</Link>
-                <Link to="/equipos/Estudiantes">Estudiantes</Link>
+              <span 
+                className="dropbtn" 
+                onClick={() => toggleDropdown('resultados')}
+              >
+                Resultados
+              </span>
+              <div className={`dropdown-content ${activeDropdown === 'resultados' ? 'active' : ''}`}>
+                <Link to="/resultados/Damas A" onClick={handleNavClick}>Damas A</Link>
+                <Link to="/resultados/Damas B" onClick={handleNavClick}>Damas B</Link>
+                <Link to="/resultados/Caballeros" onClick={handleNavClick}>Caballeros</Link>
+                <Link to="/resultados/Sub-19" onClick={handleNavClick}>Sub-19</Link>
+                <Link to="/resultados/Sub-16" onClick={handleNavClick}>Sub-16</Link>
+                <Link to="/resultados/Sub-14" onClick={handleNavClick}>Sub-14</Link>
+                <Link to="/resultados/Sub-12" onClick={handleNavClick}>Sub-12</Link>
               </div>
             </div>
 
-            {/* Submenú de Galería */}
+            {/* Enlaces principales */}
+            <Link to="/torneos" onClick={handleNavClick}>Torneos</Link>
+            <Link to="/fixture" onClick={handleNavClick}>Fixture</Link>
+
+            {/* Clubes */}
             <div className="dropdown">
-              <span className="dropbtn">Galería</span>
-              <div className="dropdown-content">
-                <Link to="/galeria/PrimeraDamas">Damas</Link>
-                <Link to="/galeria/PrimeraCaballeros">Caballeros</Link>
-                <Link to="/galeria/Inferiores">Inferiores</Link>
+              <span 
+                className="dropbtn"
+                onClick={() => toggleDropdown('clubes')}
+              >
+                Clubes
+              </span>
+              <div className={`dropdown-content ${activeDropdown === 'clubes' ? 'active' : ''}`}>
+                <Link to="/equipos/Huemules" onClick={handleNavClick}>Huemules</Link>
+                <Link to="/equipos/Wiliches" onClick={handleNavClick}>Wiliches</Link>
+                <Link to="/equipos/Estudiantes" onClick={handleNavClick}>Estudiantes</Link>
               </div>
             </div>
 
-            
+            {/* Galería */}
+            <div className="dropdown">
+              <span 
+                className="dropbtn"
+                onClick={() => toggleDropdown('galeria')}
+              >
+                Galería
+              </span>
+              <div className={`dropdown-content ${activeDropdown === 'galeria' ? 'active' : ''}`}>
+                <Link to="/galeria/PrimeraDamas" onClick={handleNavClick}>Damas</Link>
+                <Link to="/galeria/PrimeraCaballeros" onClick={handleNavClick}>Caballeros</Link>
+                <Link to="/galeria/Inferiores" onClick={handleNavClick}>Inferiores</Link>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Botón hamburguesa a la derecha */}
+        <button
+          className="navbar-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
       </nav>
     </>
   );
