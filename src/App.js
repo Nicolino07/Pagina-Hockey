@@ -6,6 +6,7 @@ import Inicio from "./pages/Inicio";
 import Fixture from "./pages/Fixture"; 
 import Torneos from "./pages/Torneos";
 import Resultados from "./pages/Resultados";
+import Footer from "./components/Footer";
 
 /*Importar equipos */
 import Huemules from "./equipos/Huemules";
@@ -25,29 +26,24 @@ function App() {
     <div className="principal">
       <BrowserRouter>
         <Navbar />
-        <Routes>
+        
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/resultados" element={<Resultados />} />
+            <Route path="/resultados/:categoria" element={<Resultados />} />
+            <Route path="/torneos" element={<Torneos />} />
+            <Route path="/fixture" element={<Fixture />} />
+            <Route path="/equipos/Huemules" element={<Huemules />} />
+            <Route path="/equipos/Wiliches" element={<Wiliches />} />
+            <Route path="/equipos/Estudiantes" element={<Estudiantes />} />
+            <Route path="/galeria/PrimeraDamas" element={<PrimeraDamas />} />
+            <Route path="/galeria/PrimeraCaballeros" element={<PrimeraCaballeros />} />
+            <Route path="/galeria/Inferiores" element={<Inferiores />} />
+          </Routes>
+        
 
-          <Route path="/" element={<Inicio />} />
-      
-          <Route path="/resultados" element={<Resultados />} />
-          <Route path="/resultados/:categoria" element={<Resultados />} />
-
-
-          <Route path="/torneos" element={<Torneos />} />
-          <Route path="/fixture" element={<Fixture />} />
-
-          {/* Ruta submenu clubes*/}
-          <Route path="/equipos/Huemules" element={<Huemules />} />
-          <Route path="/equipos/Wiliches" element={<Wiliches/>} />
-          <Route path="/equipos/Estudiantes" element={<Estudiantes />} />
-          {/* rutas submenu galeria */}
-          <Route path="/galeria/PrimeraDamas" element={<PrimeraDamas />} />
-          <Route path="/galeria/PrimeraCaballeros" element={<PrimeraCaballeros/>} />
-          <Route path="/galeria/Inferiores" element={<Inferiores />} />
-
-
-          
-        </Routes>
+          <Footer /> {/* Footer fijo en todas las páginas */}
+        
       </BrowserRouter>
 
     </div>
