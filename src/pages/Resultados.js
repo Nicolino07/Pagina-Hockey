@@ -23,7 +23,6 @@ export default function Resultados() {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 setPartidos(data);
                 
                 // Extraer fechas únicas y ordenarlas (de más nueva a más vieja)
@@ -51,9 +50,16 @@ export default function Resultados() {
 
     // Formatear fecha para mostrar
     const formatearFecha = (fechaStr) => {
-    const fecha = new Date(fechaStr + 'T00:00:00'); // Fuerza el horario a medianoche local
-    const opciones = { weekday: 'long', day: 'numeric', month: 'long' };
-    return fecha.toLocaleDateString('es-AR', opciones);
+        const fecha = new Date(fechaStr);
+        if (isNaN(fecha)) return "Fecha inválida";
+
+        const opciones = { 
+            weekday: 'long', 
+            day: 'numeric', 
+            month: 'long',
+            timeZone: 'America/Argentina/Buenos_Aires' // Ajusta según tu zona horaria
+        };
+        return fecha.toLocaleDateString('es-AR', opciones);
     };
 
     return (
@@ -73,9 +79,6 @@ export default function Resultados() {
 
                     {fechasDisponibles.length > 0 && (
                         <div className="selector-fechas">
-                            <h4 className="fecha-actual">
-                                {formatearFecha(fechaSeleccionada)}
-                            </h4>
                             <select 
                                 value={fechaSeleccionada || ''}
                                 onChange={(e) => setFechaSeleccionada(e.target.value)}
