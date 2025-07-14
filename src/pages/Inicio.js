@@ -4,7 +4,10 @@ import "./Inicio.css";
 export default function Inicio() {
   return (
     <div className='inicio-container'>
-        <h1>Pagina principal</h1>
+        <h2>¡¡Toda la info sobre hockey pista en Bariloche!!</h2>
+        <h2>En un solo lugar</h2>
+
+        <h1>Novedades</h1>
     </div>
   );
 }
