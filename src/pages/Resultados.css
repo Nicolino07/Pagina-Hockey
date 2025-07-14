@@ -9,6 +9,17 @@
 .selector-fechas {
     margin: 20px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.fecha-actual {
+    margin: 0;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .select-fecha {
@@ -18,9 +29,11 @@
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 16px;
-    margin-top: 10px;
     cursor: pointer;
+    max-width: 300px;
+    width: 100%;
 }
+
 
 .titulo-fecha {
     text-align: center;

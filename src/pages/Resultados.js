@@ -72,6 +72,9 @@ export default function Resultados() {
 
                     {fechasDisponibles.length > 0 && (
                         <div className="selector-fechas">
+                            <h4 className="fecha-actual">
+                                {formatearFecha(fechaSeleccionada)}
+                            </h4>
                             <select 
                                 value={fechaSeleccionada || ''}
                                 onChange={(e) => setFechaSeleccionada(e.target.value)}
@@ -86,20 +89,15 @@ export default function Resultados() {
                         </div>
                     )}
 
-                    {fechaSeleccionada && (
-                        <>
-                            <h4 className="titulo-fecha">{formatearFecha(fechaSeleccionada)}</h4>
-                            <div className="partidos-grid">
-                                {partidosFiltrados.map((partido, index) => (
-                                    <div key={index} className="partido-card">
-                                        <span className="equipo-local">{partido.equipo_local}</span>
-                                        <span className="marcador">{partido.goles_local} - {partido.goles_visitante}</span>
-                                        <span className="equipo-visitante">{partido.equipo_visitante}</span>
-                                    </div>
-                                ))}
+                    <div className="partidos-grid">
+                        {partidosFiltrados.map((partido, index) => (
+                            <div key={index} className="partido-card">
+                                <span className="equipo-local">{partido.equipo_local}</span>
+                                <span className="marcador">{partido.goles_local} - {partido.goles_visitante}</span>
+                                <span className="equipo-visitante">{partido.equipo_visitante}</span>
                             </div>
-                        </>
-                    )}
+                        ))}
+                    </div>
                 </>
             ) : (
                 <p>Seleccioná una categoría para ver los resultados.</p>
