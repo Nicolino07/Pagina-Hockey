@@ -54,9 +54,10 @@ export default function Resultados() {
           <div className="partidos-grid">
             {partidos.map((partido, index) => (
               <div key={index} className="partido-card">
-                <p><strong>Fecha:</strong> {new Date(partido.fecha).toLocaleDateString("es-AR")}</p>
-                <p>
-                  {partido.equipo_local} {partido.goles_local} - {partido.goles_visitante} {partido.equipo_visitante}
+                <p style={{display: 'flex', justifyContent: 'space-between'}}>
+                  <span>{partido.equipo_local}</span>
+                  <span>{partido.goles_local} - {partido.goles_visitante}</span>
+                  <span>{partido.equipo_visitante}</span>
                 </p>
               </div>
             ))}
