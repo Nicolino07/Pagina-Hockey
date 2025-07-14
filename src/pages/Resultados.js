@@ -53,11 +53,11 @@ export default function Resultados() {
 
           <div className="partidos-grid">
             {partidos.map((partido) => (
-            <div key={partido.id} className="partido-card">
-                <p><strong>Fecha:</strong> {new Date(partido.fecha).toLocaleDateString()}</p>
-                <p><strong>{partido.equipo_local}</strong> vs <strong>{partido.equipo_visitante}</strong></p>
-                <p><strong>Resultado:</strong> {partido.resultado}</p>
-            </div>
+            <p>
+              <strong>{partido.equipo_local}</strong> {partido.resultado.split("-")[0]}-
+              {partido.resultado.split("-")[1]} <strong>{partido.equipo_visitante}</strong> &nbsp;
+              {new Date(partido.fecha).toLocaleDateString()}
+            </p>
             ))}
 
           </div>
