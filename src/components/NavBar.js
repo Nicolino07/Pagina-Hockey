@@ -8,8 +8,9 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const navbarRef = useRef(null);
 
-  const obtenerClima = () => {
-    fetch("https://wttr.in/?format=%l+🌡+%t+🌥+%C")
+    const obtenerClima = () => {
+    const url = `https://wttr.in/Bariloche?format=%l+🌡+%t+🌥+%C&_=${Date.now()}`;
+    fetch(url)
       .then((res) => res.text())
       .then((data) => setClima(data.trim()))
       .catch(() => setClima("🌐 No se pudo cargar el clima"));
@@ -17,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     obtenerClima();
-    const intervalo = setInterval(obtenerClima, 10 * 60 * 1000);
+    const intervalo = setInterval(obtenerClima, 10 * 60 * 1000); // cada 10 min
     return () => clearInterval(intervalo);
   }, []);
 
