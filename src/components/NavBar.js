@@ -70,14 +70,16 @@ export default function Navbar() {
                 Resultados
               </span>
               <div className={`dropdown-content ${activeDropdown === 'resultados' ? 'active' : ''}`}>
-                <Link to="/resultados/Damas A" onClick={handleNavClick}>Damas A</Link>
-                <Link to="/resultados/Damas B" onClick={handleNavClick}>Damas B</Link>
-                <Link to="/resultados/Caballeros" onClick={handleNavClick}>Caballeros</Link>
-                <Link to="/resultados/Sub-19" onClick={handleNavClick}>Sub-19</Link>
-                <Link to="/resultados/Sub-16" onClick={handleNavClick}>Sub-16</Link>
-                <Link to="/resultados/Sub-14" onClick={handleNavClick}>Sub-14</Link>
-                <Link to="/resultados/Sub-12" onClick={handleNavClick}>Sub-12</Link>
-              </div>
+            <div className="dropdown-scroll-container">
+              <Link to="/resultados/Damas A" onClick={handleNavClick}>Damas A</Link>
+              <Link to="/resultados/Damas B" onClick={handleNavClick}>Damas B</Link>
+              <Link to="/resultados/Caballeros" onClick={handleNavClick}>Caballeros</Link>
+              <Link to="/resultados/Sub-19" onClick={handleNavClick}>Sub-19</Link>
+              <Link to="/resultados/Sub-16" onClick={handleNavClick}>Sub-16</Link>
+              <Link to="/resultados/Sub-14" onClick={handleNavClick}>Sub-14</Link>
+              <Link to="/resultados/Sub-12" onClick={handleNavClick}>Sub-12</Link>
+            </div>
+          </div>
             </div>
 
             {/* Enlaces principales */}
