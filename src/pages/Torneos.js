@@ -1,80 +1,85 @@
 import React, { useEffect, useState } from "react";
-import TablaPosiciones from "./TablaPosiciones";
 import "./Torneos.css";
 
 export default function Torneos() {
-  const [torneosActuales, setTorneosActuales] = useState([]);
-  const [torneosAnteriores, setTorneosAnteriores] = useState([]);
-  const [torneoSeleccionado, setTorneoSeleccionado] = useState(null);
-  const [mostrarAnteriores, setMostrarAnteriores] = useState(false);
-  const [cargando, setCargando] = useState(true);
+  const [torneos, setTorneos] = useState({
+    actuales: [],
+    anteriores: [],
+    cargando: true,
+    cargandoAnteriores: false
+  });
 
   useEffect(() => {
-    setCargando(true);
-    
-    // Cargar torneos actuales
+    // Cargar torneos actuales (2025)
     fetch(`${process.env.REACT_APP_API_URL}/torneos/actuales`)
-      .then((res) => res.json())
-      .then((data) => {
-        setTorneosActuales(data);
-        setCargando(false);
-      })
-      .catch((error) => console.error("Error al cargar torneos actuales:", error));
+      .then(res => res.json())
+      .then(data => {
+        setTorneos(prev => ({
+          ...prev,
+          actuales: data,
+          cargando: false
+        }));
+      });
   }, []);
 
-  const cargarTorneosAnteriores = () => {
-    if (torneosAnteriores.length === 0) {
-      setCargando(true);
+  const toggleAnteriores = () => {
+    if (torneos.anteriores.length === 0 && !torneos.cargandoAnteriores) {
+      setTorneos(prev => ({ ...prev, cargandoAnteriores: true }));
+      
       fetch(`${process.env.REACT_APP_API_URL}/torneos/anteriores`)
-        .then((res) => res.json())
-        .then((data) => {
-          setTorneosAnteriores(data);
-          setMostrarAnteriores(true);
-          setCargando(false);
-        })
-        .catch((error) => console.error("Error al cargar torneos anteriores:", error));
-    } else {
-      setMostrarAnteriores(!mostrarAnteriores);
+        .then(res => res.json())
+        .then(data => {
+          setTorneos(prev => ({
+            ...prev,
+            anteriores: data,
+            cargandoAnteriores: false
+          }));
+        });
     }
   };
 
   return (
     <div className="torneos-container">
-      <h1>Torneos {mostrarAnteriores ? "Históricos" : "2025"}</h1>
-      
-      <button 
-        onClick={cargarTorneosAnteriores}
-        className="boton-anteriores"
+      <h1>Torneos 2025</h1>
+
+      {torneos.cargando ? (
+        <p className="cargando">Cargando torneos actuales...</p>
+      ) : (
+        <div className="lista-torneos">
+          {torneos.actuales.map(torneo => (
+            <div key={torneo.id} className="torneo-card">
+              <h3>{torneo.nombre}</h3>
+              <p>{torneo.categoria}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <button
+        onClick={toggleAnteriores}
+        className={`boton-anteriores ${torneos.anteriores.length > 0 ? 'activo' : ''}`}
       >
-        {mostrarAnteriores ? "Ver Torneos Actuales" : "Ver Torneos Anteriores"}
+        {torneos.anteriores.length > 0 
+          ? "Ocultar torneos anteriores" 
+          : "Ver torneos históricos"}
       </button>
 
-      {cargando ? (
-        <p>Cargando torneos...</p>
-      ) : !torneoSeleccionado ? (
-        <ul className="lista-torneos">
-          {(mostrarAnteriores ? torneosAnteriores : torneosActuales).map((torneo) => (
-            <li key={torneo.id}>
-              <button 
-                onClick={() => setTorneoSeleccionado(torneo)}
-                className="boton-torneo"
-              >
-                {torneo.nombre} - {torneo.categoria} {torneo.año && `(${torneo.año})`}
-              </button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div className="detalle-torneo">
-          <button 
-            onClick={() => setTorneoSeleccionado(null)}
-            className="boton-volver"
-          >
-            Volver a torneos
-          </button>
-          <h2>{torneoSeleccionado.nombre} - {torneoSeleccionado.categoria}</h2>
-          <TablaPosiciones torneoId={torneoSeleccionado.id} />
-        </div>
+      {torneos.anteriores.length > 0 && (
+        <>
+          <h2>Torneos Históricos</h2>
+          <div className="lista-torneos">
+            {torneos.anteriores.map(torneo => (
+              <div key={torneo.id} className="torneo-card historico">
+                <h3>{torneo.nombre}</h3>
+                <p>{torneo.categoria} • {torneo.año}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {torneos.cargandoAnteriores && (
+        <p className="cargando">Cargando torneos históricos...</p>
       )}
     </div>
   );
