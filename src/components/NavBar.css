@@ -32,7 +32,10 @@
 .logo {
   top: 0;
   left: 10px;
-  height: 60px;         /* ajustá según tu diseño */
+  background-color: #222;
+  border-radius: 10px;
+  margin-top: 4px;
+  height: 3rem;         /* ajustá según tu diseño */
   z-index: 1100;         /* para que quede encima del resto */
 
 }
@@ -58,9 +61,6 @@
   font-weight: 500;
 }
 
-.nav-links a:hover {
-  color: #61dafb;
-}
 
 .nav-link {
   color: black;
@@ -69,9 +69,6 @@
   cursor: pointer;
 }
 
-.nav-link:hover {
-  color: #61dafb;
-}
 
 .dropdown {
   position: relative;
@@ -90,7 +87,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
- 
+  margin-top: 8px;
   background-color: #d1834f;
   min-width: 3rem;
   z-index: 1;
@@ -112,7 +109,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #026e72;
+  background-color: #192030;
 }
 
 /* Ajustes para el botón hamburguesa */
@@ -124,7 +121,7 @@
   width: 2.5rem; /* Tamaño fijo para mejor consistencia */
   height: 2.5rem;
   cursor: pointer;
-  background: black;
+  background: #192030;
   color: #d1834f;
   border: none;
   border-radius: 5px;
@@ -178,7 +175,7 @@
     display: none;
     padding: 0.5rem 0rem;
     position: static;
-    background-color: black;
+    background-color: #192030;
     box-shadow: none;
     padding-left: 1rem;
     white-space: nowrap; /* Evita el salto de línea */
