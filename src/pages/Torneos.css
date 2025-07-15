@@ -3,7 +3,11 @@
   margin: 0 auto;
   padding: 20px;
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra todo el contenido horizontalmente */
 }
+
 
 h1, h2, h3 {
   color: orange;
@@ -13,20 +17,24 @@ h1, h2, h3 {
 
 .lista-torneos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-  justify-items: center; /* Centra los items de la grilla */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 180px)); /* Columnas de ancho fijo */
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center; /* Centra las columnas */
+  width: 100%;
+  max-width: 900px; /* Limita el ancho máximo de la grilla */
 }
 
 .torneo-item {
   background: rgba(31, 26, 32, 0.8);
   border: 1px solid orange;
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px; /* Reducido de 12px */
   cursor: pointer;
   transition: all 0.3s ease;
-  min-height: 80px; /* Altura mínima reducida */
+  min-height: 70px; /* Reducido de 80px */
+  width: 100%; /* Ocupa todo el ancho de la celda de la grilla */
+  box-sizing: border-box; /* Incluye padding en el ancho */
 }
 
 .torneo-item:hover {
@@ -87,4 +95,25 @@ h1, h2, h3 {
 /* Ajustes para la tabla de posiciones */
 .tabla-wrapper {
   margin-top: 30px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .lista-torneos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px)); /* Más estrecho en móviles */
+    gap: 10px;
+  }
+  
+  .torneo-item {
+    padding: 8px;
+    min-height: 60px;
+  }
+  
+  .torneo-item h3 {
+    font-size: 0.9rem;
+  }
+  
+  .torneo-item p {
+    font-size: 0.8rem;
+  }
 }
