@@ -1,37 +1,56 @@
-/* Estilos locales a TablaPosiciones */
+/* TablaPosiciones.css */
 
-.posiciones-container {
+.tabla-posiciones-container {
     color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 20px;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
-
-.posiciones-container h2 {
+.tabla-posiciones-container h2 {
     color: whitesmoke;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.posiciones-container table {
+.tabla-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para un scroll suave en dispositivos móviles */
     margin: 0 auto;
-    border-collapse: collapse;
-    width: auto; /* o 100% si querés que ocupe todo el ancho disponible */
-    min-width: 600px; /* O el mínimo que necesites */
 }
 
-.posiciones-container th,
-.posiciones-container td {
+.tabla-scroll-container table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 800px; /* Ajusta este valor según el ancho mínimo que necesites */
+}
+
+.tabla-scroll-container th,
+.tabla-scroll-container td {
     color: whitesmoke;
     border: 1px solid #ccc;
     padding: 8px 12px;
     text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-.tabla-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 1rem;
+/* Opcional: Estilos para la barra de scroll */
+.tabla-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
