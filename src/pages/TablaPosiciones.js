@@ -14,7 +14,7 @@ export default function TablaPosiciones({ torneoId }) {
   return (
     <div className="posiciones-container">
       <h2>Tabla de posiciones</h2>
-      <div className="tabla-scroll">
+      <div className="tabla-wrapper">
         <table>
           <thead>
             <tr>
