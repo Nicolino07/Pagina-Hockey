@@ -1,119 +1,59 @@
-.torneos-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra todo el contenido horizontalmente */
+/* Estilos locales a TablaPosiciones */
+
+.posiciones-container {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
 }
 
-
-h1, h2, h3 {
-  color: orange;
-  text-align: center;
-  margin: 20px 0;
+.posiciones-container h2 {
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.lista-torneos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 180px)); /* Columnas de ancho fijo */
-  gap: 15px;
-  margin: 20px 0;
-  justify-content: center; /* Centra las columnas */
-  width: 100%;
-  max-width: 900px; /* Limita el ancho máximo de la grilla */
-}
-
-.torneo-item {
-  background: rgba(31, 26, 32, 0.8);
-  border: 1px solid orange;
-  border-radius: 8px;
-  padding: 10px; /* Reducido de 12px */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-height: 70px; /* Reducido de 80px */
-  width: 100%; /* Ocupa todo el ancho de la celda de la grilla */
-  box-sizing: border-box; /* Incluye padding en el ancho */
-}
-
-.torneo-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
-  background: rgba(31, 26, 32, 1);
-}
-
-.torneo-item h3 {
-  margin-bottom: 6px;
-  color: orange;
-}
-
-.torneo-item p {
-  color: #ccc;
-}
-
-.boton-anteriores {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 30px auto;
-  padding: 12px;
-  background-color: orange;
-  color: #1f1a20;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.boton-anteriores:hover {
-  background-color: #ff8c00;
-  transform: translateY(-2px);
-}
-
-.detalle-torneo {
-  margin-top: 20px;
-}
-
-.boton-volver {
-  background: none;
-  border: none;
-  color: orange;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s;
-}
-
-.boton-volver:hover {
-  background: rgba(255, 165, 0, 0.1);
-}
-
-/* Ajustes para la tabla de posiciones */
 .tabla-wrapper {
-  margin-top: 30px;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    -webkit-overflow-scrolling: touch; /* Scroll suave en dispositivos móviles */
+    display: flex;
+    justify-content: center;
 }
 
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-  .lista-torneos {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 150px)); /* Más estrecho en móviles */
-    gap: 10px;
-  }
-  
-  .torneo-item {
-    padding: 8px;
-    min-height: 60px;
-  }
-  
-  .torneo-item h3 {
-    font-size: 0.9rem;
-  }
-  
-  .torneo-item p {
-    font-size: 0.8rem;
-  }
+.posiciones-container table {
+    border-collapse: collapse;
+    width: auto;
+    min-width: 600px; /* Mantiene tu mínimo establecido */
+}
+
+.posiciones-container th,
+.posiciones-container td {
+    color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+/* Opcional: Estilos para la barra de scroll (puedes omitir esto si no lo necesitas) */
+.tabla-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabla-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tabla-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.tabla-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
