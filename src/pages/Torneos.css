@@ -1,59 +1,24 @@
-/* Estilos locales a TablaPosiciones */
-
-.posiciones-container {
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
+/* Solo estilos del contenedor principal y lista de torneos */
+.torneos-container {
+  padding: 20px;
+  color: whitesmoke;
 }
 
-.posiciones-container h2 {
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 100%;
+.lista-torneos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-.tabla-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 1rem;
-    -webkit-overflow-scrolling: touch; /* Scroll suave en dispositivos móviles */
-    display: flex;
-    justify-content: center;
+.torneo-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.posiciones-container table {
-    border-collapse: collapse;
-    width: auto;
-    min-width: 600px; /* Mantiene tu mínimo establecido */
-}
-
-.posiciones-container th,
-.posiciones-container td {
-    color: whitesmoke;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: center;
-}
-
-/* Opcional: Estilos para la barra de scroll (puedes omitir esto si no lo necesitas) */
-.tabla-wrapper::-webkit-scrollbar {
-    height: 8px;
-}
-
-.tabla-wrapper::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.tabla-wrapper::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-.tabla-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #555;
+/* Botones específicos de Torneos */
+.boton-anteriores {
+  background: #4a6fa5;
+  margin: 20px auto;
 }
