@@ -1,38 +1,33 @@
-/* Estilos locales a TablaPosiciones */
-
+/* Contenedor principal de la tabla */
 .posiciones-container {
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  margin: 30px 0;
 }
 
-
-.posiciones-container h2 {
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.posiciones-container table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: auto; /* o 100% si querés que ocupe todo el ancho disponible */
-    min-width: 600px; /* O el mínimo que necesites */
-    border: 1px solid #ccc;
-}
-
-.posiciones-container th,
-.posiciones-container td {
-    color: whitesmoke;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: center;
-}
-
+/* ESTE es el wrapper del scroll (NO debe estar en Torneos.css) */
 .tabla-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin-top: 1rem;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(0, 0, 0, 0.2); /* Fondo para contrastar bordes */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Estilos de tabla (bordes VISIBLES) */
+.posiciones-container table {
+  border-collapse: collapse;
+  min-width: 600px;
+  width: 100%;
+}
+
+.posiciones-container th, 
+.posiciones-container td {
+  border: 1px solid #666; /* Borde más oscuro para mejor contraste */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Efecto hover para filas */
+.posiciones-container tr:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
