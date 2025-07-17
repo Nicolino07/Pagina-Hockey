@@ -1,24 +1,49 @@
-/* Solo estilos del contenedor principal y lista de torneos */
+/* Contenedor principal */
 .torneos-container {
   padding: 20px;
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos hijos */
 }
 
+/* Contenedor de la lista de torneos */
 .lista-torneos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Ajusta este valor según necesites */
+  margin: 0 auto; /* Centra el grid dentro de su contenedor */
 }
 
+/* Items de torneo */
 .torneo-item {
   background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Botones específicos de Torneos */
+.torneo-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Botones */
 .boton-anteriores {
   background: #4a6fa5;
   margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.boton-anteriores:hover {
+  background: #3a5a8f;
 }
