@@ -1,60 +1,47 @@
-/* Contenedor principal de la tabla */
+/* Contenedor principal - Centrado pero sin scroll */
 .posiciones-container {
-  margin: 30px 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 30px auto;  /* Centrado vertical y horizontal */
+  max-width: 95%;     /* Evita que toque los bordes de la pantalla */
+  padding: 10px;
 }
 
-/* Wrapper del scroll - Versión corregida */
-.tabla-wrapper {
-  width: 100%;
-  max-width: 100vw; /* Limita al ancho de la pantalla */
-  overflow-x: auto;
+/* Contenedor del scroll - SOLO para la tabla */
+.tabla-scroll {
+  overflow-x: auto;    /* Scroll horizontal solo aquí */
   -webkit-overflow-scrolling: touch;
-  padding: 10px 0; /* Padding solo arriba/abajo */
-  margin: 0 auto;
-  position: relative;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2); /* Fondo contrastante */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Opcional: sombra para profundidad */
 }
 
-/* Estilos de tabla corregidos */
+/* Estilos de la tabla */
 .posiciones-container table {
   border-collapse: collapse;
-  min-width: 600px; /* Ancho mínimo para forzar scroll */
-  width: auto; /* Cambiado de 100% a auto */
-  margin: 0 auto;
-  background: transparent; /* Fondo transparente */
+  min-width: 600px;    /* Ancho mínimo para forzar scroll */
+  width: 100%;         /* Ocupa el 100% del contenedor .tabla-scroll */
+  margin: 0;           /* Elimina márgenes por defecto */
 }
 
+/* Celdas - Bordes visibles y estilo */
 .posiciones-container th, 
 .posiciones-container td {
-  border: 1px solid #666;
-  padding: 10px;
+  border: 2px solid #555; /* Bordes más gruesos y oscuros */
+  padding: 12px 15px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+  background: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
 }
 
-/* Efecto hover para filas */
+/* Efecto hover */
 .posiciones-container tr:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Estilos personalizados para la barra de scroll */
-.tabla-wrapper::-webkit-scrollbar {
-  height: 8px;
+/* Barra de scroll personalizada */
+.tabla-scroll::-webkit-scrollbar {
+  height: 10px;
 }
 
-.tabla-wrapper::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.tabla-wrapper::-webkit-scrollbar-thumb {
+.tabla-scroll::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-}
-
-.tabla-wrapper::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
 }
