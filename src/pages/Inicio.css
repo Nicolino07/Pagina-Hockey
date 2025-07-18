@@ -9,3 +9,41 @@
 }
 
 
+.portada-destacado {
+    background-color: #3b4440;
+    border-left: 5px solid #2c7be5;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.titulo-principal {
+    color: #2a4365;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.destacado-box {
+    background-color: rgb(20, 4, 4);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contacto-box {
+    background-color: #010305;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px dashed #2c7be5;
+}
+
+.email-link {
+    color: #2b6cb0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}

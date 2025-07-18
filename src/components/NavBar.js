@@ -89,7 +89,9 @@ export default function Navbar() {
             <Link to="/torneos" onClick={handleNavClick}>Torneos</Link>
             <Link to="/fixture" onClick={handleNavClick}>Fixture</Link>
 
-            {/* Clubes */}
+            
+            {/* Clubes 
+            
             <div className="dropdown">
               <span 
                 className="dropbtn"
@@ -103,6 +105,9 @@ export default function Navbar() {
                 <Link to="/equipos/Estudiantes" onClick={handleNavClick}>Estudiantes</Link>
               </div>
             </div>
+
+            */}
+
 
             {/* Galería */}
             <div className="dropdown">
