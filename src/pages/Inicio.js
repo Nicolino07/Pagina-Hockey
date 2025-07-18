@@ -9,7 +9,7 @@ export default function Inicio() {
         <h2>En un solo lugar</h2>
 
       <div class="portada-destacado">
-        <h1 class="titulo-principal">🏑 EL 9 de agosto comienza el Torneo Clausura de Hockey Pista 2025.</h1>
+        <h1 class="titulo-principal">En agosto comienza el Torneo Clausura de Hockey Pista 2025. 🏑</h1>
         
         <div class="destacado-box">
             <p class="destacado-texto">
