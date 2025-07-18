@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos básicos -->
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="%PUBLIC_URL%/Logo HB.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-  
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#2a4365" /> <!-- Color institucional -->
+    <!-- Verificación de Google -->
+  <meta name="google-site-verification" content="google6a3dece49ec23c24.html" />
     
-    <title>Hockey Bariloche</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/Logo-HB.png" />
+    
+    <!-- SEO PRINCIPAL -->
+    <title>Hockey Bariloche | AHByLS | Torneos Oficiales 2025</title>
+    <meta name="description" content="Toda la info de Hockey pista en Bariloche. Calendario, resultados y contacto para torneos de hockey pista.">
+    <meta name="keywords" content="hockey bariloche, torneos hockey pista, AHByLS, calendario hockey 2025, asociación hockey bariloche">
+    
+    <!-- Datos estructurados (IMPORTANTE para Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "Asociación Hockey Bariloche y Lagos del Sur",
+      "url": "https://www.hockeybariloche.com.ar",
+      "logo": "https://www.hockeybariloche.com.ar/Logo-HB.png",
+      "email": "hockeybariloche07@gmail.com",
+      "sport": "Hockey pista"
+    }
+    </script>
+    
+    <!-- Manifest (PWA) -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Active JavaScript para acceder al sitio oficial de hockey en Bariloche.</noscript>
     <div id="root"></div>
     
+    <!-- Google Analytics (Opcional) -->
+    <script>
+      if (window.location.hostname === 'www.hockeybariloche.com.ar') {
+        (function(g,t,a,c,k){g[a]=g[a]||function(){(g[a].q=g[a].q||[]).push(arguments)};
+        k=t.createElement('script');k.async=1;k.src=c;t.head.appendChild(k)})
+        (window,document,'gtag','https://www.googletagmanager.com/gtag/js?id=G-TUCODIGO');
+        gtag('config', 'G-TUCODIGO');
+      }
+    </script>
   </body>
 </html>
