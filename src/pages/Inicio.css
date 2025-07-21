@@ -32,20 +32,28 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Agrega esto a tu CSS */
 .contacto-box {
     background-color: #010305;
     padding: 15px;
     margin-top: 20px;
     border-radius: 5px;
     border: 1px dashed #2c7be5;
+    overflow-wrap: break-word;
 }
 
 .email-link {
     color: #2b6cb0;
     font-weight: bold;
     text-decoration: none;
+    word-break: break-word;
 }
 
+@media (max-width: 600px) {
+    .contacto-box p {
+        line-height: 1.5; /* Mejor espaciado en móviles */
+    }
+}
 .email-link:hover {
     text-decoration: underline;
 }

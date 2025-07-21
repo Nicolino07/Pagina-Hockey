@@ -21,7 +21,7 @@ export default function Inicio() {
                 <h3>📢 ¿Tenes alguna noticia para compartir?</h3>
                 <p>
                     Si deseas publicar resultados, goles, fotos o novedades de tu club, comunícate.
-                    ✉️ <a href="mailto:hockeybariloche07@gmail.com" class="email-link">hockeybariloche07@gmail.com</a>
+                    <br />✉️ <a href="mailto:hockeybariloche07@gmail.com" class="email-link">hockeybariloche07@gmail.com</a>
                 </p>
             </div>
         </div>
