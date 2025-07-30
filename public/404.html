@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Redirigiendo…</title>
-    <script>
-      // Toma la ruta actual y la redirige con el prefijo hash #
-      const redirectPath = window.location.pathname + window.location.search + window.location.hash;
-      window.location.replace("/#" + redirectPath);
-    </script>
+    <meta http-equiv="refresh" content="0; url=/" />
   </head>
   <body>
     <p>Redirigiendo…</p>
