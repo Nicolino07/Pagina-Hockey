@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Cambiado
 
 import Navbar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
@@ -21,7 +21,7 @@ import "./App.css";
 function App() {
   return (
     <div className="principal">
-      <HashRouter>
+      <BrowserRouter> {/* Cambiado de HashRouter a BrowserRouter */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -37,7 +37,7 @@ function App() {
           <Route path="/galeria/Inferiores" element={<Inferiores />} />
         </Routes>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
