@@ -97,6 +97,16 @@ export default function Fixture() {
           ))}
         </div>
       ))}
+
+      {/* Leyenda al final */}
+        <div className="leyenda-fixture">
+          ⚠️ Los horarios y partidos están sujetos a cambios sin previo aviso.
+        </div>
+
     </div>
+
+  
   );
+
+  
 }

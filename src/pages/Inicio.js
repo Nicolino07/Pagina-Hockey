@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Inicio.css";
 
 export default function Inicio() {
@@ -8,16 +9,19 @@ export default function Inicio() {
       <h2>En un solo lugar</h2>
 
       <div className="portada-destacado">
-        <h1 className="titulo-principal">En agosto comienza el Torneo Clausura de Hockey Pista 2025. 🏑</h1>
+        <h2>Comenzó el torneo Clausura 2025. 🏑</h2>
+        <Link to="/fixture" className="titulo-principal">
+          Consulta todos los horarios acá
+        </Link>
         
         <div className="destacado-box">
           <p className="destacado-texto">
             La Asociación de Hockey Bariloche y Lagos del Sur (AHByLS) da inicio a la 
-            segunda parte del año, que no se te escape nada!
+            segunda parte del año, ¡que no se te escape nada!
           </p>
           
           <div className="contacto-box">
-            <h3>📢 ¿Tenes alguna noticia para compartir?</h3>
+            <h3>📢 ¿Tenés alguna noticia para compartir?</h3>
             <p>
               Si deseas publicar resultados, goles, fotos o novedades de tu club, comunícate.
               <br />✉️ <a href="mailto:hockeybariloche07@gmail.com" className="email-link">hockeybariloche07@gmail.com</a>
