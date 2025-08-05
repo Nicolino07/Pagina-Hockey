@@ -47,3 +47,15 @@
 .boton-anteriores:hover {
   background: #3a5a8f;
 }
+
+.boton-volver {
+  background: #4a6fa5;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
