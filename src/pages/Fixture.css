@@ -1,10 +1,72 @@
-
-.fecha-container{
-    color: whitesmoke;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+.fixture-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
+h2 {
+    text-align: center;
+    color: whitesmoke;
+}
+.bloque-liga {
+  margin-bottom: 40px;
+  background-color: #3b4440;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.bloque-liga h2 {
+  font-size: 1.4rem;
+  color: whitesmoke;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.fecha-dia h3 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ubicacion {
+  font-style: italic;
+  color: #666;
+}
+
+.tarjeta-partido {
+  background-color: #fff;
+  border-radius: 0.6rem;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+
+.tarjeta-partido .versus {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: #222;
+}
+
+.tarjeta-partido .ubicacion {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
