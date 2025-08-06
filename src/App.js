@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // Cambiado
+import { Analytics } from "@vercel/analytics/react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 
 import Navbar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
