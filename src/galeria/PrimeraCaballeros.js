@@ -4,7 +4,7 @@ import "./EstiloGaleria.css";
 export default function PrimeraCaballeros() {
   return (
     <div className='galeria-container'>
-        <h1>Subir fotos</h1>
+        <h1>Próximamente...</h1>
     </div>
   );
 }
