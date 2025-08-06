@@ -38,6 +38,8 @@ function App() {
           <Route path="/galeria/Inferiores" element={<Inferiores />} />
         </Routes>
         <Footer />
+
+        <Analytics />
       </BrowserRouter>
     </div>
   );
