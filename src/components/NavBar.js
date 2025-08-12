@@ -86,7 +86,7 @@ export default function Navbar() {
             </div>
 
             {/* Enlaces principales */}
-            <Link to="/torneos" onClick={handleNavClick}>Torneos</Link>
+            <Link to="/posiciones" onClick={handleNavClick}>Posiciones</Link>
             <Link to="/fixture" onClick={handleNavClick}>Fixture</Link>
 
             

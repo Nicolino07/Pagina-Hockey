@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Inicio from "./pages/Inicio";
 import Fixture from "./pages/Fixture"; 
-import Torneos from "./pages/Torneos";
+import Posiciones from "./pages/Posiciones";
 import Resultados from "./pages/Resultados";
 import Footer from "./components/Footer";
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/resultados" element={<Resultados />} />
           <Route path="/resultados/:categoria" element={<Resultados />} />
-          <Route path="/torneos" element={<Torneos />} />
+          <Route path="/posiciones" element={<Posiciones />} />
           <Route path="/fixture" element={<Fixture />} />
           <Route path="/equipos/Huemules" element={<Huemules />} />
           <Route path="/equipos/Wiliches" element={<Wiliches />} />

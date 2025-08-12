@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TablaPosiciones from "./TablaPosiciones";
-import "./Torneos.css";
+import "./Posiciones.css";
 
 export default function Torneos() {
   const [torneosActuales, setTorneosActuales] = useState([]);
