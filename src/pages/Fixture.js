@@ -59,10 +59,10 @@ export default function Fixture() {
         {
           dia: "Sabado 23 agosto",
           juegos: [
-            { hora: "16:00", local: "El Bolson B", vs: "Cohiues", ubicacion: "New Lawn" },
+            { hora: "16:00", local: "El Bolson B", vs: "Coihues", ubicacion: "New Lawn" },
             { hora: "17:00", local: "Patagon", vs: "San Esteban C", ubicacion: "New Lawn" },
             { hora: "18:00", local: "El Bolson B", vs: "Huemules B", ubicacion: "New Lawn" },
-            { hora: "19:00", local: "Cohiues", vs: "Pehuenes B", ubicacion: "New Lawn" },
+            { hora: "19:00", local: "Coihues", vs: "Pehuenes B", ubicacion: "New Lawn" },
           ],
         },
         {
