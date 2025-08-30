@@ -10,7 +10,7 @@ export default function Torneos() {
   const [cargando, setCargando] = useState({ actuales: true, anteriores: false });
 
   useEffect(() => {
-    // Cargar torneos actuales (2025)
+    // Cargar torneos actuales (true)
     fetch(`${process.env.REACT_APP_API_URL}/torneos/actuales`)
       .then(res => res.json())
       .then(data => {

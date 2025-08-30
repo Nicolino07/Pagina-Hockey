@@ -81,3 +81,11 @@ li {
   background-color: #f9f9f9;
   border-top: 1px solid #ddd;
 }
+
+.escudo {
+  width: 130px;       /* ancho fijo */
+  height: 130px;      /* alto fijo */
+  object-fit: contain;  /* mantiene proporción dentro del cuadro */
+  margin: 0 6px;
+  vertical-align: middle; /* alinea con el texto */
+}
