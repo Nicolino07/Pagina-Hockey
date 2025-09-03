@@ -82,10 +82,34 @@ li {
   border-top: 1px solid #ddd;
 }
 
-.escudo {
-  width: 130px;       /* ancho fijo */
-  height: 130px;      /* alto fijo */
-  object-fit: contain;  /* mantiene proporción dentro del cuadro */
-  margin: 0 6px;
-  vertical-align: middle; /* alinea con el texto */
+.botones-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
+}
+
+.botones-categorias button {
+  background-color: #444; /* gris oscuro */
+  color: whitesmoke;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.botones-categorias button:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+}
+
+.botones-categorias button.activo {
+  background-color: #1abc9c; /* verde agua */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
