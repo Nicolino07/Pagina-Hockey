@@ -94,10 +94,11 @@ export default function Torneos() {
           >
             &larr; Volver a torneos
           </button>
-          <h2>{torneoSeleccionado.nombre} - {torneoSeleccionado.categoria}</h2>
-          {torneoSeleccionado.año && <h3>Año: {torneoSeleccionado.año}</h3>}
+          <h2>{torneoSeleccionado.categoria}</h2>
+          <h3>{torneoSeleccionado.nombre} - {torneoSeleccionado.año}</h3>
           <TablaPosiciones torneoId={torneoSeleccionado.id} />
         </div>
+
       )}
     </div>
   );
