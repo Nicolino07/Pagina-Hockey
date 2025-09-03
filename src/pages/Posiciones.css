@@ -19,7 +19,7 @@
 
 /* Items de torneo */
 .torneo-item {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 50, 0.5);
   padding: 15px;
   border-radius: 8px;
   cursor: pointer;
