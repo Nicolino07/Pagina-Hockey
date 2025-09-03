@@ -1,10 +1,15 @@
 .principal {
   text-align: center;
-  background-color: rgb(31, 26, 32);
   padding-top: 5rem; /* o el alto del navbar */
-  min-height: 100vh; /* para que ocupe toda la pantalla verticalmente */
- 
+  min-height: 100vh; /* ocupa toda la pantalla verticalmente */
+
+  background-image: url("/public/fondo.png"); /* desde public */
+  background-size: cover; /* ajusta a toda la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* hace que el fondo sea fijo */
 }
+
 .principal h1 {
   color: whitesmoke;
   font-family: verdana;
