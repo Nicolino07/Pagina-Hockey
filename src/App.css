@@ -1,21 +1,31 @@
 .principal {
   text-align: center;
-  padding-top: 5rem; /* o el alto del navbar */
-  min-height: 100vh; /* ocupa toda la pantalla verticalmente */
-
-  background-image: url("/public/fondo.png"); /* desde public */
-  background-size: cover; /* ajusta a toda la pantalla */
+  padding-top: 5rem;
+  min-height: 100vh;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* hace que el fondo sea fijo */
+  background-attachment: fixed;
 }
 
-.principal h1 {
-  color: whitesmoke;
-  font-family: verdana;
-  font-size: 3rem;
-}
-.App-link {
-  color: #61dafb;
+/* Imagen para escritorio (grande) */
+.principal {
+  background-image: url("/public/fondo.png");
 }
 
+
+
+/* Imagen para móviles */
+@media (max-width: 768px) {
+  .principal {
+    background-image: url("/public/fondo_movil.png");
+    background-attachment: scroll;
+  }
+}
+
+/* Para móviles muy pequeños */
+@media (max-width: 480px) {
+  .principal {
+    background-image: url("/public/fondo_movil.png");
+  }
+}
