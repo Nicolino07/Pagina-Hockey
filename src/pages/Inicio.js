@@ -16,8 +16,7 @@ export default function Inicio() {
         
         <div className="destacado-box">
           <p className="destacado-texto">
-            La Asociación de Hockey Bariloche y Lagos del Sur (AHByLS) da inicio a la 
-            segunda parte del año, ¡que no se te escape nada!
+            Seguí los resultados, tabla de posiciones y fixture de cada fecha.
           </p>
           
           <div className="contacto-box">
