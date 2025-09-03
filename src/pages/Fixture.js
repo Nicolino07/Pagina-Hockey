@@ -14,6 +14,7 @@ export default function Fixture() {
             { hora: "13:00", local: "Williches", vs: "Esc. Municipal", ubicacion: "Polideportivo Dina Huapi" },
             { hora: "16:00", local: "Williches", vs: "Pehuenes A", ubicacion: "Polideportivo Dina Huapi" },
             { hora: "17:00", local: "San Esteban A", vs: "Esc. Municipal", ubicacion: "Polideportivo Dina Huapi" },
+            { hora: "18:00", local: "Williches", vs: "Hualas", ubicacion: "Polideportivo Dina Huapi", estado: "Pendiente" },
           ],
         },
         {
@@ -37,7 +38,7 @@ export default function Fixture() {
             { hora: "12:00", local: "Williches", vs: "Huemules", ubicacion: "Polideportivo Dina Huapi" },
             { hora: "14:00", local: "Estudiantes", vs: "Esc. Municipal B", ubicacion: "Polideportivo Dina Huapi" },
             { hora: "15:00", local: "Williches", vs: "El Bolson", ubicacion: "Polideportivo Dina Huapi" },
-            { hora: "19:00", local: "Williches", vs: "Hualas", ubicacion: "Polideportivo Dina Huapi" },
+            { hora: "19:00", local: "Williches", vs: "Hualas", ubicacion: "Polideportivo Dina Huapi", estado: "Pendiente" },
           ],
         },
         {
