@@ -50,8 +50,8 @@ export default function Torneos() {
                   className="torneo-item"
                   onClick={() => setTorneoSeleccionado(torneo)}
                 >
-                  <p>{torneo.categoria}</p>
-                  <h3>{torneo.nombre}</h3>
+                  <h3>{torneo.categoria}</h3>
+                  <p>{torneo.nombre}</p>
             
                 </div>
               ))}
@@ -78,8 +78,10 @@ export default function Torneos() {
                       className="torneo-item"
                       onClick={() => setTorneoSeleccionado(torneo)}
                     >
-                      <h3>{torneo.nombre}</h3>
-                      <p>{torneo.categoria} ({torneo.año})</p>
+                      
+                      <h3>{torneo.categoria} ({torneo.año})</h3>
+                      <p>{torneo.nombre}</p>
+                      
                     </div>
                   ))}
                 </div>
