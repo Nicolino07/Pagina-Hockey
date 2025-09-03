@@ -50,8 +50,9 @@ export default function Torneos() {
                   className="torneo-item"
                   onClick={() => setTorneoSeleccionado(torneo)}
                 >
-                  <h3>{torneo.nombre}</h3>
                   <p>{torneo.categoria}</p>
+                  <h3>{torneo.nombre}</h3>
+            
                 </div>
               ))}
             </div>
