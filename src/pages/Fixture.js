@@ -9,6 +9,7 @@ export default function Fixture() {
   const fixture = {
 
     mayores: [
+      /* 
       {
         liga: "Damas A",
         fechas: [
@@ -32,6 +33,7 @@ export default function Fixture() {
             ],
           },
         ],
+        
       },
       {
         liga: "Caballeros",
@@ -58,19 +60,23 @@ export default function Fixture() {
           },
         ],
       },
+      */
+
       {
         liga: "Damas B",
         fechas: [
           {
-            dia: "Sabado 6 Septiembre",
+            dia: "Sabado 20 Septiembre",
             juegos: [
-              { hora: "09:00", local: "La Vieja Guardia", vs: "Huemules A", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "14:00", local: "Independiente", vs: "Patagon", ubicacion: "New Lawn" },
-              { hora: "15:00", local: "Coihues", vs: "San Esteban B", ubicacion: "New Lawn" },
-              { hora: "16:00", local: "Pehuenes B", vs: "Huemules B", ubicacion: "New Lawn" },
-              { hora: "17:00", local: "Independiente", vs: "Coihues", ubicacion: "New Lawn" },
+              { hora: "14:00", local: "Huemules B", vs: "Huemules A", ubicacion: "New Lawn" },
+              { hora: "15:00", local: "El Bolson A", vs: "El Bolson B", ubicacion: "New Lawn" },
+              { hora: "16:00", local: "La vieja Guardia", vs: "San Esteban B", ubicacion: "New Lawn" },
+              { hora: "17:00", local: "Pehuenes", vs: "San Esteban C", ubicacion: "New Lawn" },
+              { hora: "18:00", local: "El Bolson A", vs: "Huemules B", ubicacion: "New Lawn" },
+              { hora: "19:00", local: "El Bolson B", vs: "Huemules A", ubicacion: "New Lawn" },
             ],
           },
+          /*
           {
             dia: "Domingo 7 Septiembre",
             juegos: [
@@ -78,26 +84,27 @@ export default function Fixture() {
               { hora: "13:00", local: "Independiente", vs: "Lacar", ubicacion: "Polideportivo Dina Huapi" },
             ],
           },
+          */
         ],
       },
     ],
 
+
+    /*
 
     menores: [
       {
         liga: "Sub 12",
         fechas: [
           {
-            dia: "Sábado 30 Agosto",
+            dia: "Sábado 20 Septiembre",
             juegos: [
-              { hora: "10:00", local: "San Esteban A", vs: "Escuela Municipal", ubicacion: "Gimnasio Panonia" },
-              { hora: "12:30", local: "San Esteban B", vs: "Escuela Municipal", ubicacion: "Gimnasio Panonia" },
-              { hora: "13:00", local: "Vuriclub", vs: "San Esteban A", ubicacion: "Gimnasio Vuriclub" },
-              { hora: "14:45", local: "Vuriclub", vs: "San Esteban B", ubicacion: "Gimnasio Vuriclub" },
-              { hora: "12:30", local: "Pehuenes A", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+
+              { hora: "15:30", local: "Pehuenes A", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
               { hora: "14:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
             ],
           },
+          
           {
             dia: "Domingo 31 Agosto",
             juegos: [
@@ -155,9 +162,8 @@ export default function Fixture() {
         ],
       },
     ],
-    
+    */
   };
-
   return (
     <div className="fixture-container">
       <h2>Torneo Clausura 2025 - AHByLS</h2>
@@ -173,27 +179,31 @@ export default function Fixture() {
       </div>
 
       {/* Render dinámico según categoría */}
-      {fixture[categoria].map((bloque, i) => (
-        <div key={i} className="bloque-liga">
-          <h2>{bloque.liga}</h2>
-          {bloque.fechas.map((fecha, j) => (
-            <div key={j} className="fecha-dia">
-              <h3>{fecha.dia}</h3>
-              <ul>
-                {fecha.juegos.map((partido, k) => (
-                  <div key={k} className="tarjeta-partido">
-                    <div className="versus">
-                      <strong>{partido.hora}</strong> - {partido.local} vs {partido.vs}
-                    </div>
-                    <div className="estado"> {partido.estado}</div>
-                    <div className="ubicacion">📍 {partido.ubicacion}</div>
-                  </div>
-                ))}
-              </ul>
+        {fixture[categoria] && fixture[categoria].length > 0 ? (
+          fixture[categoria].map((bloque, i) => (
+            <div key={i} className="bloque-liga">
+              <h2>{bloque.liga}</h2>
+              {bloque.fechas.map((fecha, j) => (
+                <div key={j} className="fecha-dia">
+                  <h3>{fecha.dia}</h3>
+                  <ul>
+                    {fecha.juegos.map((partido, k) => (
+                      <div key={k} className="tarjeta-partido">
+                        <div className="versus">
+                          <strong>{partido.hora}</strong> - {partido.local} vs {partido.vs}
+                        </div>
+                        <div className="estado"> {partido.estado}</div>
+                        <div className="ubicacion">📍 {partido.ubicacion}</div>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      ))}
+          ))
+        ) : (
+          <p className="sin-horarios">Horarios no disponibles</p>
+        )}
 
       <div className="leyenda-fixture">
         ⚠️ Los horarios y partidos están sujetos a cambios sin previo aviso.

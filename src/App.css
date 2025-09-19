@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
   .principal {
     background-image: url("/public/fondo_movil.png");
-    /* NO cambiar background-attachment */
+    
   }
 }
 
@@ -21,6 +21,6 @@
 @media (max-width: 480px) {
   .principal {
     background-image: url("/public/fondo_movil.png");
-    /* Mantener fixed aquí también */
+   
   }
 }

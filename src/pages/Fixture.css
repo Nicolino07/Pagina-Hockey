@@ -82,6 +82,17 @@ li {
   border-top: 1px solid #ddd;
 }
 
+.sin-horarios {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #e40606;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
 .botones-categorias {
   display: flex;
   justify-content: center;
