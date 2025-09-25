@@ -11,6 +11,10 @@ export default function Resultados() {
     const [fechasDisponibles, setFechasDisponibles] = useState([]);
     const [fechaSeleccionada, setFechaSeleccionada] = useState(null);
 
+    // 👇 nuevos estados para equipos
+    const [equiposDisponibles, setEquiposDisponibles] = useState([]);
+    const [equipoSeleccionado, setEquipoSeleccionado] = useState("");
+
     useEffect(() => {
         if (!categoria) return;
 
@@ -35,6 +39,12 @@ export default function Resultados() {
                 if (fechasUnicas.length > 0) {
                     setFechaSeleccionada(fechasUnicas[0]);
                 }
+
+                // Extraer equipos únicos
+                const equiposUnicos = [...new Set(
+                    data.flatMap(p => [p.equipo_local, p.equipo_visitante])
+                )].sort();
+                setEquiposDisponibles(equiposUnicos);
                 
                 setLoading(false);
             })
@@ -45,12 +55,20 @@ export default function Resultados() {
             });
     }, [categoria]);
 
-    // Filtrar partidos por fecha seleccionada
-    const partidosFiltrados = partidos.filter(p => p.fecha === fechaSeleccionada);
+    // --- Lógica de filtrado ---
+    let partidosFiltrados = [];
+    if (equipoSeleccionado) {
+        // Mostrar todos los partidos del equipo seleccionado
+        partidosFiltrados = partidos
+            .filter(p => p.equipo_local === equipoSeleccionado || p.equipo_visitante === equipoSeleccionado)
+            .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+    } else if (fechaSeleccionada) {
+        // Mostrar últimos resultados (fecha más reciente)
+        partidosFiltrados = partidos.filter(p => p.fecha === fechaSeleccionada);
+    }
 
     // Funcion Formatear fecha 
-        const formatearFecha = (fechaStr) => {
-        // Ajuste clave: usar UTC para evitar desplazamientos
+    const formatearFecha = (fechaStr) => {
         const fecha = new Date(fechaStr);
         const fechaAjustada = new Date(fecha.getTime() + fecha.getTimezoneOffset() * 60000);
         
@@ -62,7 +80,7 @@ export default function Resultados() {
         };
         
         return fechaAjustada.toLocaleDateString('es-AR', opciones);
-        };
+    };
 
     return (
         <div className="resultados-container">
@@ -79,7 +97,24 @@ export default function Resultados() {
                         <p>No hay partidos para esta categoría.</p>
                     )}
 
-                    {fechasDisponibles.length > 0 && (
+                    {/* 👇 Filtro por equipo */}
+                    {equiposDisponibles.length > 0 && (
+                        <div className="selector-equipos">
+                            <select 
+                                value={equipoSeleccionado}
+                                onChange={(e) => setEquipoSeleccionado(e.target.value)}
+                                className="select-equipo"
+                            >
+                                <option value="">Todos los equipos</option>
+                                {equiposDisponibles.map((equipo, index) => (
+                                    <option key={index} value={equipo}>{equipo}</option>
+                                ))}
+                            </select>
+                        </div>
+                    )}
+
+                    {/* 👇 Solo mostrar selector de fechas si no hay equipo seleccionado */}
+                    {!equipoSeleccionado && fechasDisponibles.length > 0 && (
                         <div className="selector-fechas">
                             <select 
                                 value={fechaSeleccionada || ''}
