@@ -7,9 +7,9 @@ export default function Fixture() {
   const [categoria, setCategoria] = useState("mayores");
 
   const fixture = {
-
+    /*
     mayores: [
-      /* 
+      
       {
         liga: "Damas A",
         fechas: [
@@ -60,8 +60,8 @@ export default function Fixture() {
           },
         ],
       },
-      */
-
+      
+  
       {
         liga: "Damas B",
         fechas: [
@@ -76,7 +76,7 @@ export default function Fixture() {
               { hora: "19:00", local: "El Bolson B", vs: "Huemules A", ubicacion: "New Lawn" },
             ],
           },
-          /*
+          
           {
             dia: "Domingo 7 Septiembre",
             juegos: [
@@ -84,27 +84,28 @@ export default function Fixture() {
               { hora: "13:00", local: "Independiente", vs: "Lacar", ubicacion: "Polideportivo Dina Huapi" },
             ],
           },
-          */
+          
         ],
       },
     ],
 
 
-    /*
+    
+    */
 
     menores: [
       {
         liga: "Sub 12",
         fechas: [
           {
-            dia: "Sábado 20 Septiembre",
+            dia: "Sábado 27 Septiembre",
             juegos: [
 
-              { hora: "15:30", local: "Pehuenes A", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
-              { hora: "14:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+              { hora: "13:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+              /*{ hora: "14:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },*/
             ],
           },
-          
+          /*
           {
             dia: "Domingo 31 Agosto",
             juegos: [
@@ -112,39 +113,38 @@ export default function Fixture() {
               { hora: "11:15", local: "Pehuenes D", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
             ],
           },
+          */
         ],
       },
       {
         liga: "Sub 14",
         fechas: [
           {
-            dia: "Sábado 30 Agosto",
+            dia: "Sábado 27 Septiembre",
             juegos: [
-              { hora: "10:30", local: "San Esteban", vs: "Escuela Municipal", ubicacion: "Gimnasio Panonia" },
-              { hora: "13:45", local: "Vuriclub", vs: "San Esteban A", ubicacion: "Gimnasio Vuriclub" },
-              { hora: "13:15", local: "Pehuenes A", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
-              { hora: "16:00", local: "Pehuenes C", vs: "Cordillerano (Desarrollo)", ubicacion: "Polideportivo Roberto Vargas" },
-              { hora: "18:00", local: "Pehuenes D", vs: "Cordillerano (Desarrollo)", ubicacion: "Polideportivo Roberto Vargas" },
+             { hora: "15:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+
             ],
           },
+          /*
           {
             dia: "Domingo 31 Agosto",
             juegos: [
               { hora: "10:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
             ],
+            
           },
+          */
         ],
       },
       {
         liga: "Sub 16",
         fechas: [
           {
-            dia: "Sábado 30 Agosto",
+            dia: "Sábado 27 Septiembre",
             juegos: [
-              { hora: "11:30", local: "San Esteban", vs: "Escuela Municipal", ubicacion: "Gimnasio Panonia" },
-              { hora: "15:30", local: "Vuriclub", vs: "San Esteban A", ubicacion: "Gimnasio Vuriclub" },
-              { hora: "15:00", local: "Pehuenes A", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
-              { hora: "19:00", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+            { hora: "17:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+           
             ],
           },
         ],
@@ -153,16 +153,16 @@ export default function Fixture() {
         liga: "Sub 19",
         fechas: [
           {
-            dia: "Sábado 30 Agosto",
+            dia: "Sábado 27 Septiembre",
             juegos: [
-              { hora: "16:30", local: "Vuriclub", vs: "San Esteban A", ubicacion: "Gimnasio Vuriclub" },
-              { hora: "17:00", local: "Pehuenes", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+              { hora: "18:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+              
             ],
           },
         ],
       },
     ],
-    */
+    
   };
   return (
     <div className="fixture-container">
