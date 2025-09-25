@@ -9,36 +9,17 @@ export default function TablaPosiciones({ torneoId }) {
     fetch(`${process.env.REACT_APP_API_URL}/torneos/${torneoId}/posiciones`)
       .then(res => res.json())
       .then(data => {
-        setPosiciones(data);
-
-        // si el backend devuelve "ultima_actualizacion" o similar, mejor usar eso
-        if (data.length > 0 && data[0].ultima_fecha_partido) {
-          setUltimaFecha(data[0].ultima_fecha_partido);
-        } else {
-          // fallback: pedir al backend los partidos del torneo
-          fetch(`${process.env.REACT_APP_API_URL}/torneos/${torneoId}/partidos`)
-            .then(res => res.json())
-            .then(partidos => {
-              if (partidos.length > 0) {
-                const fechas = partidos.map(p => new Date(p.fecha));
-                const ultima = new Date(Math.max(...fechas));
-                setUltimaFecha(ultima.toISOString());
-              }
-            })
-            .catch(err => console.error(err));
-        }
+        setPosiciones(data.posiciones || []);
+        setUltimaFecha(data.ultima_fecha);
       })
       .catch(err => console.error(err));
   }, [torneoId]);
 
-  const formatearFecha = (fechaStr) => {
-    if (!fechaStr) return "";
-    const fecha = new Date(fechaStr);
-    return fecha.toLocaleDateString("es-AR", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    });
+  // Formatear fecha como dd/mm
+  const formatearFecha = (fechaIso) => {
+    if (!fechaIso) return null;
+    const fecha = new Date(fechaIso);
+    return fecha.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit" });
   };
 
   return (
@@ -79,8 +60,9 @@ export default function TablaPosiciones({ torneoId }) {
         </table>
       </div>
 
+      {/* 🔽 Mostrar fecha última actualización si existe */}
       {ultimaFecha && (
-        <p className="ultima-actualizacion">
+        <p className="ultima-fecha">
           Última actualización: {formatearFecha(ultimaFecha)}
         </p>
       )}
