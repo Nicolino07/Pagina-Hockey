@@ -51,8 +51,16 @@
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto 1fr; /* fecha + local + marcador + visitante */
     align-items: center;
+    column-gap: 10px;
+}
+
+.fecha-partido {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    padding-right: 10px;
 }
 
 
