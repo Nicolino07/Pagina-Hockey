@@ -4,14 +4,15 @@
     border: 1px ridge orange;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     padding: 10px;
-    display: flex;
+    display: inline-flex;
     gap: 10px;
     align-items: center;
     border-radius: 6px;
-    width: auto;      /* 👈 se ajusta al contenido */
-    min-width: unset; /* 👈 evita forzar tamaño mínimo */
-    max-width: unset; /* 👈 elimina límite de 300px */
 
+     /* Centrar la barra */
+    margin-left: auto;
+    margin-right: auto;
+ 
     /* 🔽 Nuevas propiedades para scroll horizontal */
     overflow-x: auto;
     white-space: nowrap;
