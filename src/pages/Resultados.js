@@ -79,9 +79,7 @@ export default function Resultados() {
                 timeZone: 'America/Argentina/Buenos_Aires'
             });
         };
-        
-        return fechaAjustada.toLocaleDateString('es-AR', opciones);
-    };
+
 
     return (
         <div className="resultados-container">
