@@ -71,11 +71,10 @@ export default function Resultados() {
     const fecha = new Date(fechaStr);
     const fechaAjustada = new Date(fecha.getTime() + fecha.getTimezoneOffset() * 60000);
 
-    // fecha Solo números: día/mes/año
+    // fecha Solo números: día/mes
             return fechaAjustada.toLocaleDateString('es-AR', {
                 day: '2-digit',
                 month: '2-digit',
-                year: 'numeric',
                 timeZone: 'America/Argentina/Buenos_Aires'
             });
         };
@@ -131,16 +130,14 @@ export default function Resultados() {
 
                     <div className="partidos-grid">
                         {partidosFiltrados.map((partido, index) => (
+
                             <div key={index} className="partido-card">
+                                <span className="fecha-partido">{formatearFecha(partido.fecha)}</span>
                                 <span className="equipo-local">{partido.equipo_local}</span>
                                 <span className="marcador">{partido.goles_local} - {partido.goles_visitante}</span>
                                 <span className="equipo-visitante">{partido.equipo_visitante}</span>
-
-                                 {/* 👇 Mostrar fecha SOLO si hay un equipo seleccionado */}
-                                {equipoSeleccionado && (
-                                    <span className="fecha-partido">{formatearFecha(partido.fecha)}</span>
-                                )}
                             </div>
+                            
                         ))}
                     </div>
 
