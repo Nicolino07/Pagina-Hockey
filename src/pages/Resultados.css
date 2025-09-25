@@ -55,6 +55,14 @@
     align-items: center;
 }
 
+
+.partido-card .fecha-partido {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
 .equipo-local {
     text-align: right;
     padding-right: 15px;

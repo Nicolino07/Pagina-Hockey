@@ -136,8 +136,11 @@ export default function Resultados() {
                                 <span className="equipo-local">{partido.equipo_local}</span>
                                 <span className="marcador">{partido.goles_local} - {partido.goles_visitante}</span>
                                 <span className="equipo-visitante">{partido.equipo_visitante}</span>
-                                {/* 👇 Nueva línea para la fecha */}
-                                <span className="fecha-partido">{formatearFecha(partido.fecha)}</span>
+                                
+                                 {/* 👇 Mostrar fecha SOLO si hay un equipo seleccionado */}
+                                {equipoSeleccionado && (
+                                    <span className="fecha-partido">{formatearFecha(partido.fecha)}</span>
+                                )}
                             </div>
                         ))}
                     </div>
