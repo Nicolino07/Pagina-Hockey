@@ -101,19 +101,23 @@ export default function Fixture() {
             dia: "Sábado 27 Septiembre",
             juegos: [
 
-              { hora: "13:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
-              /*{ hora: "14:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },*/
+              { hora: "13:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
+              { hora: "14:00", local: "Pehuenes", vs: "San Esteban", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+              { hora: "15:45", local: "Pehuenes", vs: "San Esteban", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
             ],
           },
-          /*
+          
           {
-            dia: "Domingo 31 Agosto",
+            dia: "Domingo 28 Septiembre",
             juegos: [
-              { hora: "09:30", local: "Pehuenes C", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
-              { hora: "11:15", local: "Pehuenes D", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+              { hora: "09:30", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+              { hora: "10:15", local: "Pehuenes B", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+              { hora: "16:15", local: "Pehuenes C", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+              { hora: "17:00", local: "Pehuenes D", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+            
             ],
           },
-          */
+          
         ],
       },
       {
@@ -122,19 +126,22 @@ export default function Fixture() {
           {
             dia: "Sábado 27 Septiembre",
             juegos: [
-             { hora: "15:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+              { hora: "15:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
+              { hora: "14:45", local: "Pehuenes ", vs: "San Esteban", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)", estado: "Desarrollo"},
+              { hora: "16:30", local: "Pehuenes ", vs: "San Esteban", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)", estado: "Desarrollo"},
 
             ],
           },
-          /*
+          
           {
-            dia: "Domingo 31 Agosto",
+            dia: "Domingo 28 Septiembre",
             juegos: [
-              { hora: "10:15", local: "Pehuenes B", vs: "Estudiantes", ubicacion: "Polideportivo Roberto Vargas" },
+              { hora: "11:15", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+              { hora: "14:15", local: "Pehuenes B", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
             ],
             
           },
-          */
+        
         ],
       },
       {
@@ -143,10 +150,21 @@ export default function Fixture() {
           {
             dia: "Sábado 27 Septiembre",
             juegos: [
-            { hora: "17:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
+            { hora: "17:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
            
             ],
           },
+
+          {
+            dia: "Domingo 28 Septiembre",
+            juegos: [
+            { hora: "12:15", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+            { hora: "15:15", local: "Pehuenes B", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+           
+           
+            ],
+          },
+
         ],
       },
       {
@@ -155,10 +173,19 @@ export default function Fixture() {
           {
             dia: "Sábado 27 Septiembre",
             juegos: [
-              { hora: "18:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N° 3" },
-              
+              { hora: "18:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
+              { hora: "12:15", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
             ],
           },
+
+          {
+            dia: "Domingo 29 Septiembre",
+            juegos: [
+              { hora: "18:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
+              { hora: "13:15", local: "Pehuenes ", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+            ],
+          },
+
         ],
       },
     ],
