@@ -14,15 +14,13 @@ export default function Fixture() {
         liga: "Damas A",
         fechas: [
           {
-            dia: "Sabado 4 Octubre",
+            dia: "Domingo 26 Octubre",
             juegos: [
-              { hora: "9:15", local: "Eventos", vs: "Vuriclub", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "10:15", local: "Esc. Municipal", vs: "Pehuenes A", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "11:15", local: "Williches", vs: "Pehuenes A", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "15:15", local: "San Esteban A", vs: "Eventos", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "16:15", local: "Estudiantes", vs: "Williches", ubicacion: "Polideportivo Dina Huapi"},
+              { hora: "18:00", local: "Pehuenes", vs: "Estudiantes", ubicacion: "Gimnasio Municipal N°3" },
+              { hora: "19:00", local: "San Esteban", vs: "Vuriclub", ubicacion: "Gimnasio Municipal N°3" },
             ],
           },
+          /*
           {
             dia: "Domingo 5 Octubre",
             juegos: [
@@ -32,12 +30,14 @@ export default function Fixture() {
              
             ],
           },
+          */
         ],
         
       },
       {
         liga: "Caballeros",
         fechas: [
+          /*
           {
             dia: "Sabado 4 Octubre",
             juegos: [
@@ -48,20 +48,19 @@ export default function Fixture() {
               
             ],
           },
+          */
           {
-            dia: "Domingo 5 Octubre",
+            dia: "Domingo 26 Octubre",
             juegos: [
-              { hora: "11:15", local: "Hualas", vs: "El Bolson", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "15:15", local: "Hualas", vs: "San Esteban", ubicacion: "Polideportivo Dina Huapi"},
-              { hora: "16:15", local: "Huemules", vs: "El Bolson", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "18:15", local: "Esc. Municipal A", vs: "Estudiantes", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "19:15", local: "San Esteban", vs: "Williches", ubicacion: "Polideportivo Dina Huapi" },
+              { hora: "20:00", local: "Esc. Municipal B", vs: "Huemules", ubicacion: "Gimnasio Municipal N°3" },
+              { hora: "21:00", local: "Esc. Municipal A", vs: "San Esteban", ubicacion: "Gimnasio Municipal N°3" },
+      
             ],
           },
         ],
       },
       
-  
+      /*
       {
         liga: "Damas B",
         fechas: [
@@ -87,10 +86,12 @@ export default function Fixture() {
           
         ],
       },
+
+      */
     ],
 
 
-    
+    /*
     menores: [
       {
         liga: "Sub 12",
@@ -104,7 +105,7 @@ export default function Fixture() {
               { hora: "16:30", local: "Esc. Municipal", vs: "Pehuenes C", ubicacion: "Gimnasio Municipal N° 3" },
             ],
           },
-          /*
+          
           {
             dia: "Domingo 28 Septiembre",
             juegos: [
@@ -116,11 +117,10 @@ export default function Fixture() {
             ],
           },
 
-          */
-          
         ],
+        
       },
-
+        
       {
         liga: "Sub 14",
         fechas: [
@@ -131,7 +131,7 @@ export default function Fixture() {
               { hora: "17:15", local: "Esc. Municipal", vs: "Pehuenes B", ubicacion: "Gimnasio Municipal N° 3" },
             ],
           },
-          /*
+          
           {
             dia: "Domingo 28 Septiembre",
             juegos: [
@@ -140,11 +140,11 @@ export default function Fixture() {
             ],
             
           },
-          */
+          
         
         ],
       },
-      /*
+      
       {
         liga: "Sub 16",
         fechas: [
@@ -190,8 +190,10 @@ export default function Fixture() {
         ],
       },
 
-      */
+      
     ],
+
+    */
   };
   return (
     <div className="fixture-container">
