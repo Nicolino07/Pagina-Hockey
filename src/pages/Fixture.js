@@ -14,10 +14,10 @@ export default function Fixture() {
         liga: "Damas A",
         fechas: [
           {
-            dia: "Domingo 26 Octubre",
+            dia: "Domingo 2 Noviembre",
             juegos: [
-              { hora: "18:00", local: "Pehuenes", vs: "Estudiantes", ubicacion: "Gimnasio Municipal N°3" },
-              { hora: "19:00", local: "San Esteban", vs: "Vuriclub", ubicacion: "Gimnasio Municipal N°3" },
+              { hora: "11:00", local: "Hualas", vs: "Eventos", ubicacion: "San Martin de los Andes" },
+              { hora: "15:00", local: "Hualas", vs: "Vuriclub", ubicacion: "San Martin de los Andes" },
             ],
           },
           /*
@@ -37,49 +37,51 @@ export default function Fixture() {
       {
         liga: "Caballeros",
         fechas: [
-          /*
+          
           {
-            dia: "Sabado 4 Octubre",
+            dia: "Sabado 1 Noviembre",
             juegos: [
-              { hora: "12:15", local: "Huemules", vs: "Esc. Municipal A", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "13:15", local: "Esc. Municipal B", vs: "Estudiantes", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "14:15", local: "Williches", vs: "San Esteban", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "17:15", local: "Estudiantes", vs: "Esc. Municipal A", ubicacion: "Polideportivo Dina Huapi" },
-              
+              { hora: "21:00", local: "Hualas", vs: "Lacar", ubicacion: "San Martin de los Andes" },
+             
             ],
           },
-          */
+          
           {
-            dia: "Domingo 26 Octubre",
+            dia: "Domingo 2 Noviembre",
             juegos: [
-              { hora: "20:00", local: "Esc. Municipal B", vs: "Huemules", ubicacion: "Gimnasio Municipal N°3" },
-              { hora: "21:00", local: "Esc. Municipal A", vs: "San Esteban", ubicacion: "Gimnasio Municipal N°3" },
-      
+              { hora: "12:00", local: "Hualas", vs: "Esc. Municipal A", ubicacion: "San Martin de los Andes" },
+              { hora: "13:00", local: "Lacar", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
+              {hora: "16:00", local: "Hualas", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
+              { hora: "17:00", local: "Lacar", vs: "Esc. Municipal A", ubicacion: "San Martin de los Andes" },
             ],
           },
         ],
       },
       
-      /*
+      
       {
         liga: "Damas B",
         fechas: [
+          
           {
-            dia: "Sabado 4 Octubre",
+            dia: "Sabado 1 Noviembre",
             juegos: [
-              { hora: "17:00", local: "San Esteban B", vs: "Huemules A", ubicacion: "New Lawn" },
-              { hora: "18:00", local: "Huemules B", vs: "San Esteban C", ubicacion: "New Lawn" },
-              { hora: "19:00", local: "La vieja Guardia", vs: "Patagon", ubicacion: "New Lawn" },
+              { hora: "14:00", local: "El Bolson A", vs: "Huemules A", ubicacion: "New Lawn" },
+              { hora: "15:00", local: "El Bolson B", vs: "La Vieja Guardia", ubicacion: "New Lawn" },
+              { hora: "16:00", local: "San Esteban C", vs: "Cohiues", ubicacion: "New Lawn" },
+              { hora: "15:00", local: "El Bolson B", vs: "Pehuenes B", ubicacion: "New Lawn" },
+              { hora: "18:00", local: "La Vieja Guardia", vs: "El Bolson A", ubicacion: "New Lawn" },
+               { hora: "19:00", local: "San Esteban B", vs: "Patagon", ubicacion: "New Lawn" },
               
             ],
           },
           
           {
-            dia: "Domingo 5 Octubre",
+            dia: "Domingo 2 Noviembre",
             juegos: [
-              { hora: "10:15", local: "Pehuenes", vs: "Lacar", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "13:15", local: "El Bolson B", vs: "Lacar", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "14:15", local: "El Bolson A", vs: "Patagon", ubicacion: "Polideportivo Dina Huapi" },
+
+              { hora: "10:00", local: "Lacar", vs: "Cohiues", ubicacion: "San Martin de los Andes" },
+              { hora: "14:00", local: "Lacar", vs: "Patagon", ubicacion: "San Martin de los Andes" },
              
             ],
           },
@@ -87,7 +89,7 @@ export default function Fixture() {
         ],
       },
 
-      */
+    
     ],
 
 
