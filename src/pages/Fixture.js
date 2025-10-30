@@ -18,6 +18,8 @@ export default function Fixture() {
             juegos: [
               { hora: "11:00", local: "Hualas", vs: "Eventos", ubicacion: "San Martin de los Andes" },
               { hora: "15:00", local: "Hualas", vs: "Vuriclub", ubicacion: "San Martin de los Andes" },
+              { hora: "20:00", local: "Estudiantes", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N°3"},
+              { hora: "21:00", local: "Williches", vs: "San Esteban", ubicacion: "Gimnasio Municipal N°3"},
             ],
           },
           /*
@@ -53,6 +55,7 @@ export default function Fixture() {
               { hora: "13:00", local: "Lacar", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
               {hora: "16:00", local: "Hualas", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
               { hora: "17:00", local: "Lacar", vs: "Esc. Municipal A", ubicacion: "San Martin de los Andes" },
+              { hora: "22:00", local: "Huemules", vs: "Estudiantes", ubicacion: "Gimnasio Municipal N°3"},
             ],
           },
         ],
