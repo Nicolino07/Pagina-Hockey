@@ -14,25 +14,23 @@ export default function Fixture() {
         liga: "Damas A",
         fechas: [
           {
-            dia: "Domingo 2 Noviembre",
+            dia: "Sabado 8 Noviembre",
             juegos: [
-              { hora: "11:00", local: "Hualas", vs: "Eventos", ubicacion: "San Martin de los Andes" },
-              { hora: "15:00", local: "Hualas", vs: "Vuriclub", ubicacion: "San Martin de los Andes" },
-              { hora: "20:00", local: "Estudiantes", vs: "Esc. Municipal", ubicacion: "Gimnasio Municipal N°3"},
-              { hora: "21:00", local: "Williches", vs: "San Esteban", ubicacion: "Gimnasio Municipal N°3"},
+              { hora: "09:30", local: "Williches", vs: "Vuriclub", ubicacion: "Polideportivo Dina Huapi" },
+              { hora: "10:30", local: "Eventos", vs: "Esc. Municipal", ubicacion: "Polideportivo Dina Huapi" },
             ],
           },
-          /*
+          
           {
-            dia: "Domingo 5 Octubre",
+            dia: "Domingo 9 Noviembre",
             juegos: [
-              { hora: "09:15", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "12:15", local: "Williches", vs: "Hualas", ubicacion: "Polideportivo Dina Huapi" },
-              { hora: "17:15", local: "Hualas", vs: "Esc. Municipal", ubicacion: "Polideportivo Dina Huapi" },
+              { hora: "21:00", local: "Esc. Municipal", vs: "Vuriclub", ubicacion: "Gimnasio Municipal N°3" },
+              { hora: "22:00", local: "Williches", vs: "Pehuenes A", ubicacion: "Gimnasio Municipal N°3"},
+              { hora: "23:00", local: "Estudiante", vs: "Eventos", ubicacion: "Gimnasio Municipal N°3"  },
              
             ],
           },
-          */
+    
         ],
         
       },
@@ -41,21 +39,21 @@ export default function Fixture() {
         fechas: [
           
           {
-            dia: "Sabado 1 Noviembre",
+            dia: "Sabado 8 Noviembre",
             juegos: [
-              { hora: "21:00", local: "Hualas", vs: "Lacar", ubicacion: "San Martin de los Andes" },
+
+              { hora: "11:30", local: "Esc. Municipal B", vs: "Williches", ubicacion: "Polideportivo Dina Huapi" },
+              { hora: "12:30", local: "San Esteban", vs: "Huemules", ubicacion: "Polideportivo Dina Huapi" },
              
             ],
           },
           
           {
-            dia: "Domingo 2 Noviembre",
+            dia: "Domingo 9 Noviembre",
             juegos: [
-              { hora: "12:00", local: "Hualas", vs: "Esc. Municipal A", ubicacion: "San Martin de los Andes" },
-              { hora: "13:00", local: "Lacar", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
-              {hora: "16:00", local: "Hualas", vs: "Esc. Municipal B", ubicacion: "San Martin de los Andes" },
-              { hora: "17:00", local: "Lacar", vs: "Esc. Municipal A", ubicacion: "San Martin de los Andes" },
-              { hora: "22:00", local: "Huemules", vs: "Estudiantes", ubicacion: "Gimnasio Municipal N°3"},
+              { hora: "13:00", local: "El Bolson", vs: "Estudiantes", ubicacion: "El Bolson" },
+              { hora: "16:00", local: "El Bolson", vs: "San Esteban", ubicacion: "El Bolson" },
+         
             ],
           },
         ],
@@ -67,24 +65,27 @@ export default function Fixture() {
         fechas: [
           
           {
-            dia: "Sabado 1 Noviembre",
+            dia: "Sabado 8 Noviembre",
             juegos: [
-              { hora: "14:00", local: "El Bolson A", vs: "Huemules A", ubicacion: "New Lawn" },
-              { hora: "15:00", local: "El Bolson B", vs: "La Vieja Guardia", ubicacion: "New Lawn" },
-              { hora: "16:00", local: "San Esteban C", vs: "Cohiues", ubicacion: "New Lawn" },
-              { hora: "15:00", local: "El Bolson B", vs: "Pehuenes B", ubicacion: "New Lawn" },
-              { hora: "18:00", local: "La Vieja Guardia", vs: "El Bolson A", ubicacion: "New Lawn" },
-               { hora: "19:00", local: "San Esteban B", vs: "Patagon", ubicacion: "New Lawn" },
-              
+              { hora: "15:00", local: "Patagon", vs: "Huemules A", ubicacion: "New Lawn" },
+              { hora: "16:00", local: "La Vieja Guardia", vs: "Pehuenes A", ubicacion: "New Lawn" },
+              { hora: "17:00", local: "Huemules B", vs: "San Esteban A", ubicacion: "New Lawn" },
+              { hora: "18:00", local: "San Esteban B", vs: "Huemules A", ubicacion: "New Lawn" },
+              { hora: "19:00", local: "Patagon", vs: "Cohiues", ubicacion: "New Lawn" },
+             
             ],
           },
           
           {
-            dia: "Domingo 2 Noviembre",
+            dia: "Domingo 9 Noviembre",
             juegos: [
 
-              { hora: "10:00", local: "Lacar", vs: "Cohiues", ubicacion: "San Martin de los Andes" },
-              { hora: "14:00", local: "Lacar", vs: "Patagon", ubicacion: "San Martin de los Andes" },
+              { hora: "11:00", local: "El Bolson A", vs: "Independiente", ubicacion: "El Bolson" },
+              { hora: "12:00", local: "El Bolson B", vs: "San Esteban A", ubicacion: "El Bolson" },
+              { hora: "14:00", local: "El Bolson A", vs: "San Esteban B", ubicacion: "El Bolson" },
+              { hora: "15:00", local: "El Bolson B", vs: "Independiente", ubicacion: "El Bolson" },
+              { hora: "17:00", local: "El Bolson A", vs: "San Esteban A", ubicacion: "El Bolson" },
+              { hora: "18:00", local: "El Bolson B", vs: "San Esteban B", ubicacion: "El Bolson" },
              
             ],
           },
@@ -96,13 +97,14 @@ export default function Fixture() {
     ],
 
 
-    /*
+    
     menores: [
+      /*
       {
         liga: "Sub 12",
         fechas: [
           {
-            dia: "Sábado 4 Octubre",
+            dia: "Sábado 8 Noviembre",
             juegos: [
 
               { hora: "14:00", local: "Esc. Municipal", vs: "Pehuenes A", ubicacion: "Gimnasio Municipal N° 3" },
@@ -125,18 +127,18 @@ export default function Fixture() {
         ],
         
       },
-        
+        */
       {
         liga: "Sub 14",
         fechas: [
           {
-            dia: "Sábado 4 Octubre",
+            dia: "Sábado 8 Noviembre",
             juegos: [
-              { hora: "15:30", local: "Esc. Municipal", vs: "Pehuenes A", ubicacion: "Gimnasio Municipal N° 3" },
-              { hora: "17:15", local: "Esc. Municipal", vs: "Pehuenes B", ubicacion: "Gimnasio Municipal N° 3" },
+              { hora: "13:30", local: "San Esteban", vs: "Pehuenes", ubicacion: "Polideportivo Dina Huapi", estado: "¡Final!" },
+              
             ],
           },
-          
+          /*
           {
             dia: "Domingo 28 Septiembre",
             juegos: [
@@ -145,7 +147,7 @@ export default function Fixture() {
             ],
             
           },
-          
+          */
         
         ],
       },
@@ -154,13 +156,14 @@ export default function Fixture() {
         liga: "Sub 16",
         fechas: [
           {
-            dia: "Sábado 27 Septiembre",
+            dia: "Sábado 8 Noviembre",
             juegos: [
-            { hora: "17:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
+
+              { hora: "14:30", local: "San Esteban", vs: "Pehuenes", ubicacion: "Polideportivo Dina Huapi", estado: "¡Final!" },
            
             ],
           },
-
+          /*
           {
             dia: "Domingo 28 Septiembre",
             juegos: [
@@ -170,20 +173,22 @@ export default function Fixture() {
            
             ],
           },
-
+          */
         ],
       },
+
       {
         liga: "Sub 19",
         fechas: [
           {
-            dia: "Sábado 27 Septiembre",
+            dia: "Sábado 8 Noviembre",
             juegos: [
-              { hora: "18:00", local: "Independiente de Esquel", vs: "Esc. Municipal", ubicacion: "Esquel" },
-              { hora: "12:15", local: "Pehuenes A", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
+
+              { hora: "15:30", local: "San Esteban", vs: "Pehuenes", ubicacion: "Polideportivo Dina Huapi", estado: "¡Final!" },
+
             ],
           },
-
+          /*
           {
             dia: "Domingo 29 Septiembre",
             juegos: [
@@ -191,14 +196,14 @@ export default function Fixture() {
               { hora: "13:15", local: "Pehuenes ", vs: "Vuriclub", ubicacion: "Polideportivo Roberto Vargas (Pehuenes)" },
             ],
           },
-
+          */
         ],
       },
 
       
     ],
 
-    */
+  
   };
   return (
     <div className="fixture-container">
